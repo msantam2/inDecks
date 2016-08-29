@@ -95,7 +95,7 @@ Redux structure, you'll need to do the same.
 
 ## Deck Cycles
 
-### Deck API Request Actions
+### Decks API Request Actions
 
 * `fetchAllDecks`
   0. invoked from `DeckIndex` `didMount`/`willReceiveProps`

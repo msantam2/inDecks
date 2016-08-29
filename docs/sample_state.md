@@ -21,7 +21,6 @@
   decks: {
     1: {
       title: "anatomy",
-      author_id: 1,
       subject_id: 1,
       description: "study the anatomy of the human body!"
     }
@@ -29,8 +28,7 @@
   cards: {
     1: {
       question: "What is a tendon?",
-      answer: "Fibrous collagen that links muscle to bone"
-      author_id: 1,
+      answer: "Fibrous collagen that links muscle to bone",
       deck_id: 1,
     }
   }

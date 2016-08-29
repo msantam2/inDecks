@@ -49,68 +49,61 @@ inDecks is a single-page web application inspired by Brainscape, a fun and effic
 - [ ] Seed users
 - [ ] Review phase 1
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Subjects (2 day)
 
-**Objective:** Notes can be created, read, edited and destroyed through
+**Objective:** Decks belong to Subjects that can be created, read, edited and destroyed through the API.
+
+- [ ] `Subject` model
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for subjects (`SubjectsController`)
+- [ ] JBuilder views for subjects
+- [ ] Adding decks requires a subject
+- [ ] Moving decks between subjects
+- [ ] Viewing decks by subject
+- [ ] Style subject components
+- [ ] Seed subject
+
+### Phase 3: Decks Model, API, and components (2 days)
+
+**Objective:** Decks can be created, read, edited and destroyed through
 the API.
 
-- [ ] `Note` model
+- [ ] `Deck` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`NotesController`)
-- [ ] JBuilder views for notes
-- Note components and respective Redux loops
-  - [ ] `NotesIndex`
-  - [ ] `NoteIndexItem`
-  - [ ] `NoteForm`
-- [ ] Autosave notes feature
-- [ ] Style notes components
-- [ ] Seed notes
+- [ ] CRUD API for notes (`DecksController`)
+- [ ] JBuilder views for decks
+- Deck components and respective Redux loops
+  - [ ] `DeckIndex`
+  - [ ] `DeckIndexItem`
+  - [ ] `DeckForm`
+- [ ] Style decks components
+- [ ] Seed decks (include a coding deck!)
 
-### Phase 3: Notebooks (2 day)
+### Phase 4: Cards (1 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Cards can be created, read, edited and destroyed through
+the API.
 
-- [ ] `Notebook` model
+- [ ] `Card` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`NotebooksController`)
-- [ ] JBuilder views for notebooks
-- [ ] Adding notes requires a notebook
-- [ ] Moving notes between notebooks
-- [ ] Viewing notes by notebook
-- [ ] Style notebook components
-- [ ] Seed notebooks
+- [ ] CRUD API for notes (`CardsController`)
+- [ ] JBuilder views for cards
+- Card components and respective Redux loops
+  - [ ] `CardQuestion`
+  - [ ] `CardAnswer`
+  - [ ] `CardForm`
+- [ ] Style card components
+- [ ] Seed cards
 
-### Phase 4: Tags (1 days)
+### Phase 5: Allow Styling in Study Mode (1 days, W2 Th 6pm)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**objective:** Allow easy and beautiful interaction with index cards while studying a deck.
 
-- [ ] `Tag` model and `Taggings` join table
-- [ ] Fetching tags for notes
-- [ ] Adding tags to notes
-- [ ] Searching notes by tag
-- [ ] Style search & tag components
-- [ ] Seed tags with seed data
-
-### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
-
-**objective:** Allow rich text editing of notes.
-
-- [ ] Integrate `react-quill` (based on Quill.js).
-- [ ] Rails helpers to sanitize HTML before rendering.
-- [ ] Style Quill components.
-- [ ] Add Quill styling to seeded notes
-
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
-
-**objective:** Add infinite scroll to Notes Index
-
-- [ ] Paginate Notes Index API to send 20 results at a time
-- [ ] Append next set of results when user scrolls and is near bottom
-- [ ] Style scroll components and transitions
-- [ ] Ensure seed data demonstrates infinite scroll
+- [ ] Render card question and card answer separately, in same space
+  - [ ] Add 'Reveal Answer' button to 'flip over the card'
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Badges to track progress
+- [ ] Animation of cards
+- [ ] Accessibility button for those with poor vision (button to
+  enlarge all content on the screen)

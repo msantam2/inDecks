@@ -5,14 +5,14 @@
 
 ### Minimum Viable Product
 
-inDecks is a single-page web application inspired by Brainscape, a fun and efficient way to study different topics via digital flashcards. inDecks will be built using Ruby on Rails and React/Redux. By September 9, this app will provide a pleasant user experience, with bug-free navigation, sufficient seed data, and delightful styling. The minimum core functionality of inDecks will be as follows:
+inDecks is a single-page web application inspired by Brainscape, a fun and efficient way to study different subjects via digital flashcards. inDecks will be built using Ruby on Rails and React/Redux. By September 9, this app will provide a pleasant user experience, with bug-free navigation, sufficient seed data, and delightful styling. The minimum core functionality of inDecks will be as follows:
 
 - [ ] Hosted on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] Search decks of flashcards
 - [ ] Study decks of flashcards
-- [ ] Create/Delete decks of flashcards
-- [ ] Tag decks with a specific category
+- [ ] Create different Subject categories
+- [ ] Create/Delete decks of flashcards within a Subject
 - [ ] Production README [sample](docs/production_readme.md)
 
 ### Design Docs

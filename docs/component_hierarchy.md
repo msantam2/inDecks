@@ -51,7 +51,7 @@
 | "/log-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
 | "/home/subject/:subjectId/deck/:deckId" | "SubjectContainer" |
-| "/home/subject/deck/:deckId" | "DeckContainer" |
+| "/home/deck/:deckId" | "DeckContainer" |
 | "/subject-search" | "SubjectSearch" |
 | "/new-subject" | "NewSubject" |
 | "/new-deck" | "NewDeck" |

@@ -24,7 +24,7 @@ inDecks is a single-page web application inspired by Brainscape, a fun and effic
 * [DB schema][schema]
 
 [wireframes]: ./wireframes/
-[components]: ./component_heirarchy.md
+[components]: ./component_hierarchy.md
 [redux_structure]: ./redux_structure.md
 [sample_state]: ./sample_state.md
 [api_endpoints]: ./api_endpoints.md

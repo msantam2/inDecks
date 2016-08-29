@@ -9,7 +9,7 @@ inDecks is a single-page web application inspired by Brainscape, a fun and effic
 
 - [ ] Hosted on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Search decks of flashcards
+- [ ] Search decks of flashcards by Subject
 - [ ] Study decks of flashcards
 - [ ] Create different Subject categories
 - [ ] Create/Delete decks of flashcards within a Subject

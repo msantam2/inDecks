@@ -4,55 +4,61 @@
  - AuthForm
 
 **HomeContainer**
- - Home
+ - Header
  - SubjectIndex
- - SubjectIndexItem
+ - SubjectDetail
+ - DecksIndex
 
 **SubjectContainer**
- - SubjectHeader
- - DeckIndex
+ - SubjectIndex
 
 **SubjectIndex**
  - SubjectIndexItem
 
-**SubjectIndexItem**
- - SubjectDetail
-
 **DeckContainer**
- - DeckHeader
  - DeckIndex
 
 **DeckIndex**
  - DeckIndexItem
 
-**DeckIndexItem**
- - DeckDetail
- - CardQuestion
- - CardAnswer
+**CardContainer**
+ - SubjectDetail
+ - DeckIndexItem
+ - CardIndex
 
-**NewSubject**
- - NewSubject
-
-**NewDeck**
- - NewDeck
+**CardIndex**
+ - CardIndexItem
 
 **NewCard**
  - NewCard
 
-**SubjectSearch**
- - SubjectSearch
- - SubjectIndex
+**NewDeck**
+ - NewDeck
+
+**DeleteDeck**
+ - DeleteDeck
+
+**NewSubject**
+ - NewSubject
+
+**DeleteSubject**
+ - DeleteSubject
+
+**SearchContainer**
+ - SearchBar
+ - SearchResults
 
 ## Routes
 
 |Path   | Component   |
 |-------|-------------|
-| "/sign-up" | "AuthFormContainer" |
-| "/log-in" | "AuthFormContainer" |
-| "/home" | "HomeContainer" |
-| "/home/subject/:subjectId/deck/:deckId" | "SubjectContainer" |
+| "/signup" | "AuthFormContainer" |
+| "/login"  | "AuthFormContainer" |
+| "/home"   | "HomeContainer"     |
+| "/home/deck/:deckId/cards/:cardId" | "CardContainer" |
 | "/home/deck/:deckId" | "DeckContainer" |
-| "/subject-search" | "SubjectSearch" |
+| "/home/subject/:subjectId/decks/:deckId" | "SubjectContainer" |
+| "/new-card"    | "NewCard"    |
+| "/new-deck"    | "NewDeck"    |
 | "/new-subject" | "NewSubject" |
-| "/new-deck" | "NewDeck" |
-| "/new-card" | "NewCard" |
+| "/subject-search" | "SearchContainer" |

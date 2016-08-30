@@ -9,10 +9,11 @@ inDecks is a single-page web application inspired by Brainscape, a fun and effic
 
 - [ ] Hosted on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Search decks of flashcards by Subject
-- [ ] Study decks of flashcards
-- [ ] Create different Subject categories
-- [ ] Create/Delete decks of flashcards within a Subject
+- [ ] Create/Delete cards
+- [ ] Create/Delete decks
+- [ ] Create/Delete subjects
+- [ ] Study decks of flashcards within various subjects
+- [ ] Search for subjects
 - [ ] Production README [sample](docs/production_readme.md)
 
 ### Design Docs
@@ -43,30 +44,31 @@ inDecks is a single-page web application inspired by Brainscape, a fun and effic
 - [ ] Webpack & react/redux modules
 - [ ] `APIUtil` to interact with the API
 - [ ] Redux cycle for frontend authentication
-- [ ] User signup/signin components
-- [ ] Blank landing component after signup/signin
-- [ ] Style signup/signin components
+- [ ] User signup/login components
+- [ ] Blank landing component after signup/login
+- [ ] Style signup/login components
 - [ ] Seed users
 - [ ] Review phase 1
 
-### Phase 2: Subjects (2 day)
+### Phase 2: Cards (1 days)
 
-**Objective:** Decks belong to Subjects that can be created, read, edited and destroyed through the API.
+**Objective:** Cards can be created, read, edited and destroyed through
+the API.
 
-- [ ] `Subject` model
+- [ ] `Card` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for subjects (`SubjectsController`)
-- [ ] JBuilder views for subjects
-- [ ] Adding decks requires a subject
-- [ ] Moving decks between subjects
-- [ ] Viewing decks by subject
-- [ ] Style subject components
-- [ ] Seed subject
+- [ ] CRUD API for notes (`CardsController`)
+- [ ] JBuilder views for cards
+- Card components and respective Redux loops
+ - [ ] `CardQuestion`
+ - [ ] `CardAnswer`
+ - [ ] `CardForm`
+- [ ] Style card components
+- [ ] Seed cards
 
 ### Phase 3: Decks Model, API, and components (2 days)
 
-**Objective:** Decks can be created, read, edited and destroyed through
-the API.
+**Objective:** Decks (that have many Cards) can be created, read, edited and destroyed through the API.
 
 - [ ] `Deck` model
 - [ ] Seed database with a small amount of test data
@@ -79,30 +81,33 @@ the API.
 - [ ] Style decks components
 - [ ] Seed decks (include a coding deck!)
 
-### Phase 4: Cards (1 days)
 
-**Objective:** Cards can be created, read, edited and destroyed through
-the API.
+### Phase 4: Subjects (2 day)
 
-- [ ] `Card` model
+**Objective:** Subjects (that have many decks) can be created, read, edited and destroyed through the API.
+
+- [ ] `Subject` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`CardsController`)
-- [ ] JBuilder views for cards
-- Card components and respective Redux loops
-  - [ ] `CardQuestion`
-  - [ ] `CardAnswer`
-  - [ ] `CardForm`
-- [ ] Style card components
-- [ ] Seed cards
+- [ ] CRUD API for subjects (`SubjectsController`)
+- [ ] JBuilder views for subjects
+- [ ] Adding decks requires a subject
+- [ ] Moving decks between subjects
+- [ ] Viewing decks by subject
+- [ ] Style subject components
+- [ ] Seed subject
 
-### Phase 5: Allow Styling in Study Mode (1 days, W2 Th 6pm)
+### Phase 5: Search (1 days, W2 Th 6pm)
 
-**objective:** Allow easy and beautiful interaction with index cards while studying a deck.
-
-- [ ] Render card question and card answer separately, in same space
-  - [ ] Add 'Reveal Answer' button to 'flip over the card'
+**Objective:** Provide easy and simple interface for searching various subjects
+- [ ] Search API that filters search server-side (`SearchesController`)
+- [ ] Search Components and their respective Redux loops
+ - [ ] `SearchContainer`
+ - [ ] `SearchBar`
+ - [ ] `SearchResults`
+- [ ] Add subjects to user's library
 
 ### Bonus Features (TBD)
+- [ ] Tags
 - [ ] Badges to track progress
 - [ ] Animation of cards
 - [ ] Accessibility button for those with poor vision (button to

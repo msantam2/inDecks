@@ -19,15 +19,6 @@
 - `DELETE /api/session`
 - `GET /api/session`
 
-### Subjects
-
-- `GET /api/subjects`
-- `POST /api/subjects`
-- `GET /api/subjects/:id`
-- `DELETE /api/subjects/:id`
-- `GET /api/subjects/:id/decks`
-- index of all decks for a subject
-
 ### Decks
 
 - `GET /api/decks`
@@ -37,11 +28,26 @@
 - `PATCH /api/decks/:id`
 - `DELETE /api/decks/:id`
 
-### Cards
+#### Decks > Cards
+- `GET /api/decks/:id/cards/`
+  - index of all cards for a deck
+- `GET /api/decks/:id/cards/:id`
+  - Show a card from a deck
+- `POST /api/decks/:id/cards`
+  - Create new card within a deck
+- `PATCH /api/decks/:id/cards/:id`
+  - Update a card within a deck
+- `DELETE /api/decks/:id/cards/:id`
+  - Delete a card from within a deck
 
-- `GET /api/cards`
-  - Cards index/search
-- `POST /api/cards`
-- `GET /api/cards/:id`
-- `PATCH /api/cards/:id`
-- `DELETE /api/cards/:id`
+### Subjects
+
+- `GET /api/subjects`
+ - Subjects index/search
+- `POST /api/subjects`
+- `GET /api/subjects/:id`
+- `DELETE /api/subjects/:id`
+
+#### Subjects > Decks
+- `GET /api/subjects/:id/decks`
+  - index of all decks for a subject

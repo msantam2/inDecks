@@ -11,11 +11,11 @@
     createDeck: {errors: ["title can't be blank"]},
     createCard: {errors: ["body can't be blank"]}
   },
-  subjects: {
+  cards: {
     1: {
-      title: "Biology 101",
-      author_id: 1
-      }
+      question: "What is a tendon?",
+      answer: "Fibrous collagen that links muscle to bone",
+      deck_id: 1
     }
   },
   decks: {
@@ -25,12 +25,15 @@
       subject_id: 1
     }
   },
-  cards: {
+  subjects: {
     1: {
-      question: "What is a tendon?",
-      answer: "Fibrous collagen that links muscle to bone",
-      deck_id: 1
+      title: "Biology 101",
+      author_id: 1
     }
+  },
+  search_params: {
+    subjects: [],
+    num_cards: undefined
   }
 }
 ```

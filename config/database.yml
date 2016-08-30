@@ -78,8 +78,3 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: inDecks_production
-  username: inDecks
-  password: <%= ENV['INDECKS_DATABASE_PASSWORD'] %>

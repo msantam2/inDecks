@@ -26,8 +26,8 @@ export const SessionActions = {
     user
   }),
 
-  receiveErrors: (user) => ({
-    type: SessionConstants.RECIEVE_ERRORS,
-    user
+  receiveErrors: (error) => ({
+    type: SessionConstants.RECEIVE_ERRORS,
+    error
   })
 };

@@ -21,15 +21,14 @@ const SessionApiUtil = {
     });
   },
 
-  logout: (success, error) => {
+  logout: (success) => {
     // ajax request
     $.ajax({
       type: 'DELETE',
       url: 'api/session',
-      success,
-      error
+      success
     });
   }
 };
 
-export default SessionApiUtil; 
+export default SessionApiUtil;

@@ -13,7 +13,7 @@
 class User < ActiveRecord::Base
   before_validation :ensure_session_token
 
-  validates :email, :password_digest, :session_token, pressence: true
+  validates :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 8, allow_nil: true }
 
   attr_reader :password
@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return user if user && user.is_password?(password)
-    nil 
+    nil
   end
 
   def self.generate_session_token

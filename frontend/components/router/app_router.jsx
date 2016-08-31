@@ -32,7 +32,7 @@ class AppRouter extends React.Component {
       <Router history={ hashHistory }>
         <Route path='/' component={ App } />
           <Route path='/signup' component={ SessionFormContainer } />
-          <Route path='/login' component={ SessionFormContainer } /> 
+          <Route path='/login' component={ SessionFormContainer } />
       </Router>
     );
   }

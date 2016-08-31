@@ -20,11 +20,21 @@ class AppRouter extends React.Component {
     }
   }
 
-  _ensureLoggedIn(nextState, replace){
+  _redirectIfLoggedIn(nextState, replace){
     const currentUser = this.props.currentUser;
-    if (!currentUser) {
-      replace('/login');
+    if (currentUser) {
+      replace('/');
     }
+  }
+
+  render() {
+    return (
+      <Router history={ hashHistory }>
+        <Route path='/' component={ App } />
+          <Route path='/signup' component={ SessionFormContainer } />
+          <Route path='/login' component={ SessionFormContainer } /> 
+      </Router>
+    );
   }
 }
 

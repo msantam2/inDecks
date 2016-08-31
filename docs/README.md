@@ -1,7 +1,7 @@
 # inDecks
 
-[Heroku Link][heroku]
-[heroku]: http://www.herokuapp.com
+[inDecks Website!][inDecks]
+[inDecks]: http://www.studyindecks.com/
 
 ### Minimum Viable Product
 

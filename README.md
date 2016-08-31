@@ -1,1 +1,4 @@
-production README goes here!
+# inDecks
+
+[inDecks Website!][inDecks]
+[inDecks]: http://www.studyindecks.com/

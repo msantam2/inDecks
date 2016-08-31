@@ -1,5 +1,5 @@
 import Greeting from './greeting';
-import { SessionActions } from '../actions/session_actions';
+import { SessionActions } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({

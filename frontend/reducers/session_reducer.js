@@ -14,7 +14,7 @@ const SessionReducer = (state = _nullUser, action) => {
       const currentUser = action.currentUser;
       return merge({}, _nullUser, {currentUser});
     case (SessionConstants.RECEIVE_ERRORS):
-      const errors = action.errors;
+      const errors = [action.errors.responseText];
       return merge({}, _nullUser, {errors});
     default:
       return state;

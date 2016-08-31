@@ -5,8 +5,8 @@ const SessionMiddleware = ({getState, dispatch}) => next => action => {
   const successCallback = (user) => {
     dispatch(SessionActions.receiveCurrentUser(user));
   };
-  const errorCallback = (err) => {
-    dispatch(SessionActions.receiveErrors(err));
+  const errorCallback = (errs) => {
+    dispatch(SessionActions.receiveErrors(errs));
   };
 
   switch (action.type) {

@@ -13,7 +13,8 @@
 class User < ActiveRecord::Base
   before_validation :ensure_session_token
 
-  validates :email, :password_digest, :session_token, presence: true
+  validates :password_digest, :session_token, presence: true
+  validates :email, presence: true, uniqueness: true 
   validates :password, length: { minimum: 8, allow_nil: true }
 
   attr_reader :password

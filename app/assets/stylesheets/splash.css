@@ -5,49 +5,49 @@
   align-items: center;
   margin: 0;
   padding: 100px 0;
-  background-image: url('https://postimg.org/image/jcfohh78r/');
+  background-image: url('https://s9.postimg.org/uc0vt2xnz/tabletop.jpg');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.index-cards-img {
-  position: absolute;
-  width: 700px;
-  height; 700px;
-}
+.index-card-img {
 
-.tagline {
-  font-family: 'Baloo Bhaina', cursive;
-  font-size: 50px;
 }
 
 .signup-login {
-  font-family: 'Dosis', sans-serif;
-  font-size: 25px;
   margin-top: 30px;
 }
 
-.sign-up-btn, .login-btn {
-  border-radius: 10px;
-  background-color: transparent;
+.sign-up-link, .login-link {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.sign-up-link:hover, .login-link:hover {
+	background-color:#eb675e;
+}
+.sign-up-link:active, .login-link:active {
+	position:relative;
+	top:1px;
 }
 
 .sign-up-btn {
   margin-right: 20px;
 }
 
-.sign-up-link, .login-link {
-  text-decoration: none;
-  color: rgb(255, 90, 95);
-  font-weight: bold;
-  padding: 15px;
-}
-
 .sign-up:visited, .login:visited {
   text-decoration: none;
-}
-
-.underline {
-  text-decoration: underline;
 }

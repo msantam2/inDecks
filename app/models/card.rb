@@ -15,6 +15,6 @@ class Card < ActiveRecord::Base
 
   #belongs_to :deck
 
-  #has_one :subject
-  #  through 
+  #has_one :subject 
+  #  through
 end

@@ -1,0 +1,12 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+button, input[type="submit"]  {
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+  -webkit-filter: brightness(85%);
+}

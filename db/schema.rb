@@ -19,12 +19,9 @@ ActiveRecord::Schema.define(version: 20160901175248) do
   create_table "cards", force: :cascade do |t|
     t.string   "question",   null: false
     t.string   "answer",     null: false
-    t.integer  "deck_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "cards", ["deck_id"], name: "index_cards_on_deck_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false

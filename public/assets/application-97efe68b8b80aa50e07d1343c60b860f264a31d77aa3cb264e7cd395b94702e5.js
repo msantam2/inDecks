@@ -40313,6 +40313,7 @@ return jQuery;
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'index-card' },
+	      _react2.default.createElement('img', { className: 'index-card-img', src: '/assets/index-cards.png', alt: 'index card' }),
 	      _react2.default.createElement(
 	        'p',
 	        { className: 'tagline' },

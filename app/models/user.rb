@@ -9,13 +9,14 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
-
 class User < ActiveRecord::Base
   before_validation :ensure_session_token
 
   validates :password_digest, :session_token, presence: true
-  validates :email, presence: true, uniqueness: true 
+  validates :email, presence: true, uniqueness: true
   validates :password, length: { minimum: 8, allow_nil: true }
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+
 
   attr_reader :password
 

@@ -4,8 +4,7 @@ import { Link } from 'react-router';
 const sessionLinks = () => (
   <div className='splash'>
     <div className='index-card'>
-      <img className='index-card-img' src='/assets/index-cards.png' alt='index card'/ >
-      <p className='tagline'>inDecks: A more <span className='underline'>fun</span> and <span className='underline'>efficient</span> way to study.</p>
+      <img src='https://s16.postimg.org/rc6v4irqt/index_cards.png' border='0' alt='index-cards' className='index-cards-img'/>
     </div>
 
     <div className='signup-login'>

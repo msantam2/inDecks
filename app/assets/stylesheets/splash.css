@@ -5,18 +5,13 @@
   align-items: center;
   margin: 0;
   padding: 100px 0;
-  background-image: url('/assets/tabletop.jpg');
+  background-image: url('https://postimg.org/image/jcfohh78r/');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.index-card {
-  /*background: url("/assets/index-cards.png")*/
-
-}
-
-.index-card-img {
+.index-cards-img {
   position: absolute;
   width: 700px;
   height; 700px;

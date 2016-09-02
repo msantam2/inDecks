@@ -21,6 +21,7 @@ const NavBar = ({currentUser, logout}) => {
   return (
     <nav className='navbar'>
       <p className='logo'>inDecks</p>
+      
       <ul className='greeting'>
         {greeting}
       </ul>

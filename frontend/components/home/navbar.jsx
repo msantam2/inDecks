@@ -20,7 +20,7 @@ const NavBar = ({currentUser, logout}) => {
 
   return (
     <nav className='navbar'>
-      <p className='logo'>inDecks</p>
+      <p className='logo-text'><Link to='/' className='logo-link'>inDecks</Link></p>
 
       <ul className='greeting'>
         {greeting}

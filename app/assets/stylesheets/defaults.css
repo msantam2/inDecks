@@ -10,3 +10,7 @@ button, input[type="submit"]  {
 input[type="submit"]:hover, button:hover {
   -webkit-filter: brightness(85%);
 }
+
+html {
+  font-family: 'Raleway', sans-serif;
+}

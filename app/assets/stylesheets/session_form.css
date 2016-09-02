@@ -1,15 +1,36 @@
 .login-form-container{
- margin: 50px auto;
- display: block;
- width: 50%
+  width: 100%;
+  background-image: url('https://s17.postimg.org/nmhxnqvi7/study_picture.jpg');
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .login-form-box {
-border: 1px solid #cdd0cc ;
-padding: 1em ;
+  border: 1px solid #cdd0cc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0 auto;
+  width: 225px;
+  /*height: 315px;*/
+  margin-top: -210px;
+  background: whitesmoke;
+}
 
+.login-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .login-title{
  font-size: 1.8em;
+}
+
+.session-form-btn {
+  border: none;
+  margin: 0 auto;
+}
+
+.session-form-errors {
+  padding-left: 0; 
 }

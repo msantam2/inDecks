@@ -1,16 +1,29 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #ff8d8d;
+  background-color: #ff6767;
   align-items: center;
-  border-bottom: 2px solid #323232; 
+  border-bottom: 2px solid #323232;
 }
 
-.logo {
+.logo-text {
   font-family: 'Comfortaa', cursive;
   font-size: 50px;
   margin: 0 0 0 5px;
   padding: 0;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.logo-link:visited {
+  text-decoration: none;
 }
 
 .greeting {
@@ -22,7 +35,7 @@
 	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#e4685d;
+	background-color:#eb392a;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
@@ -54,6 +67,5 @@
 
 .user-email-navbar {
   margin-right: 20px;
-  font-family:Arial;
   font-size:15px;
 }

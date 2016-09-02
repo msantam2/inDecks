@@ -3,7 +3,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 // Components
 import App from '../app';
-import Home from '../home/home';
+import Splash from '../home/splash';
 import SessionFormContainer from '../session_form/session_form_container';
 
 
@@ -32,7 +32,7 @@ class AppRouter extends React.Component {
     return (
       <Router history={ hashHistory }>
         <Route path='/' component={ App }>
-          <IndexRoute component={ Home } />
+          <IndexRoute component={ Splash } />
           <Route path='/signup' component={ SessionFormContainer } />
           <Route path='/login' component={ SessionFormContainer } />
         </Route>

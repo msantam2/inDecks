@@ -1,4 +1,4 @@
-.home {
+.splash {
   margin: 0;
   background-image: url('https://s9.postimg.org/uc0vt2xnz/tabletop.jpg');
   background-repeat: no-repeat;
@@ -13,5 +13,5 @@
 .index-cards-img {
   height: auto;
   width: 800px;
-  margin-bottom: 45px; 
+  margin-bottom: 45px;
 }

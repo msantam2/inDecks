@@ -32,5 +32,9 @@
 }
 
 .session-form-errors {
+  padding-left: 0;
+}
+
+.errors-list {
   padding-left: 0; 
 }

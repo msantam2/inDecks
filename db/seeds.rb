@@ -4,6 +4,7 @@ User.create(email: 'johnhamlin@gmail.com', password: 'johnhamlin')
 User.create(email: 'brookejones@gmail.com', password: 'brookejones')
 User.create(email: 'alisonchristine@gmail.com', password: 'alisonchristine')
 
+
 Card.create!(question: 'What is the center of the atom called?', answer: 'The nucleus')
 Card.create!(question: 'At room temperature, what is the only metal in liquid form?', answer: 'mercury')
 Card.create!(question: 'Is sodium hydroxide (NaOH) an acid or base?', answer: 'base')

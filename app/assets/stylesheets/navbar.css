@@ -3,6 +3,7 @@
   justify-content: space-between;
   background-color: #ff8d8d;
   align-items: center;
+  border-bottom: 2px solid #323232; 
 }
 
 .logo {
@@ -15,17 +16,9 @@
 .greeting {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
-
-.sign-up-link {
-  margin-right: 20px;
-}
-
-.login-link {
-  margin-right: 20px;
-}
-
-.sign-up-link, .login-link {
+.session-btn {
 	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	box-shadow:inset 0px 39px 0px -24px #e67a73;
@@ -41,19 +34,26 @@
 	padding:6px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
+  margin-right: 20px;
 }
-.sign-up-link:hover, .login-link:hover {
+.session-btn:hover {
 	background-color:#eb675e;
 }
-.sign-up-link:active, .login-link:active {
+.session-btn:active {
 	position:relative;
 	top:1px;
 }
 
-.sign-up-btn {
-  margin-right: 20px;
+.session-btn:visited {
+  text-decoration: none;
 }
 
-.sign-up:visited, .login:visited {
-  text-decoration: none;
+.logout-btn {
+  border: none;
+}
+
+.user-email-navbar {
+  margin-right: 20px;
+  font-family:Arial;
+  font-size:15px;
 }

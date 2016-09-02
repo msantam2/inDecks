@@ -1,7 +1,9 @@
 .login-form-container{
-  width: 100%;
   background-image: url('https://s17.postimg.org/nmhxnqvi7/study_picture.jpg');
   height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
 }
@@ -12,7 +14,6 @@
   padding: 1em;
   margin: 0 auto;
   width: 225px;
-  /*height: 315px;*/
   margin-top: -210px;
   background: whitesmoke;
 }
@@ -36,5 +37,5 @@
 }
 
 .errors-list {
-  padding-left: 0; 
+  padding-left: 0;
 }

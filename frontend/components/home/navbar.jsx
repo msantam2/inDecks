@@ -8,7 +8,7 @@ const NavBar = ({currentUser, logout}) => {
     greeting =
       [
         <li key='1' className='user-email-navbar'>{currentUser.email}</li>,
-        <li key='2'><button className='session-btn logout-btn' onClick={logout}>Logout</button></li>
+        <li key='2'><Link to='/' className='session-btn logout-btn' onClick={logout}>Logout</Link></li>
       ];
   } else {
     greeting =

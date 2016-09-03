@@ -1,7 +1,7 @@
 import { CardConstants, CardActions } from '../actions/card_actions';
 import merge from 'lodash/merge';
 
-const CardReducer = (state = {}, action) => {
+const CardsReducer = (state = {}, action) => {
   switch (action.type) {
     case (CardConstants.RECEIVE_CARDS):
       return action.cards;
@@ -10,4 +10,4 @@ const CardReducer = (state = {}, action) => {
   }
 };
 
-export default CardReducer;
+export default CardsReducer;

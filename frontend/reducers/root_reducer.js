@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import SessionReducer from './session_reducer';
-import CardReducer from './card_reducer';
+import CardsReducer from './cards_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  cards: CardReducer
+  cards: CardsReducer
 });
 
 export default RootReducer;

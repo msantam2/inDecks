@@ -82,10 +82,10 @@ Redux structure, you'll need to do the same.
   0. the `CardsReducer` updates `cards` in the application's state.
 * `receiveSingleCard`
   0. invoked from an API callback
-  0. the `CardReducer` updates `cards[id]` in the application's state.
+  0. the `CardsReducer` updates `cards[id]` in the application's state.
 * `removeCard`
   0. invoked from an API callback
-  0. the `CardReducer` removes `cards[id]` from the application's state.
+  0. the `CardsReducer` removes `cards[id]` from the application's state.
 
 ## Deck Cycles
 

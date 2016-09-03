@@ -7,12 +7,12 @@
 #  answer     :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  mastered   :boolean          default(FALSE)
+#  mastery    :integer          default(0)
 #
 
 class Card < ActiveRecord::Base
-  validates :question, :answer, presence: true
-
+  validates :question, :answer, :mastery, presence: true
+  validates_inclusion_of :mastery, :in => 0..5
   #belongs_to :deck
 
   #has_one :subject

@@ -18,13 +18,13 @@
     1: {id: 1,
     question: "What is a tendon?",
     answer: "Fibrous collagen that links muscle to bone",
-    mastered: false,
+    mastery: 2,
     deck_id: 1
     },
     2: {id: 2,
     question: "What is the capital of Arkansas?",
     answer: "Little Rock",
-    mastered: true,
+    mastery: 5,
     deck_id: 1
     }
   },

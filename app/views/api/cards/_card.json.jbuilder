@@ -1,1 +1,1 @@
-json.extract! card, :id, :question, :answer, :mastered
+json.extract! card, :id, :question, :answer, :mastery

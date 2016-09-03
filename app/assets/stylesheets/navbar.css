@@ -1,29 +1,14 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #ff6767;
+  background-color: rgb(48, 48, 48);
   align-items: center;
-  border-bottom: 2px solid #323232;
-}
-
-.logo-text {
-  font-family: 'Comfortaa', cursive;
-  font-size: 50px;
-  margin: 0 0 0 5px;
-  padding: 0;
+  border-bottom: 1px solid white;
 }
 
 .logo-link {
-  text-decoration: none;
-  color: black;
-}
-
-.logo-link:hover {
-  text-decoration: none;
-}
-
-.logo-link:visited {
-  text-decoration: none;
+  margin: -80px;
+  margin-left: 0;
 }
 
 .greeting {
@@ -32,10 +17,10 @@
   align-items: center;
 }
 .session-btn {
-	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#eb392a;
+	-moz-box-shadow:inset 0px 39px 0px -24px rgb(109, 209, 245);
+	-webkit-box-shadow:inset 0px 39px 0px -24px rgb(109, 209, 245);
+	box-shadow:inset 0px 39px 0px -24px rgb(109, 209, 245);
+	background-color:rgb(83, 194, 234);
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
@@ -49,8 +34,9 @@
 	text-shadow:0px 1px 0px #b23e35;
   margin-right: 20px;
 }
+
 .session-btn:hover {
-	background-color:#eb675e;
+	background-color:rgb(83, 194, 234);
 }
 .session-btn:active {
 	position:relative;
@@ -64,4 +50,5 @@
 .user-email-navbar {
   margin-right: 20px;
   font-size:15px;
+  color: white;
 }

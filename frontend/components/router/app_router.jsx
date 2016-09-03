@@ -37,8 +37,7 @@ class AppRouter extends React.Component {
           <IndexRoute component={ Splash } />
           <Route path='/signup' component={ SessionFormContainer } />
           <Route path='/login' component={ SessionFormContainer } />
-
-          <Route path='/dashboard' component={ Dashboard } />
+          <Route path='/dashboard' component={ CardIndexContainer } />
         </Route>
       </Router>
     );

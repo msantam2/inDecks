@@ -1,0 +1,19 @@
+.card-index-container {
+  background-color: rgb(48, 48, 48);
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 15px 0 15px 15px;
+}
+
+.card-count {
+  color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  padding: 23px;
+  border-radius: 5px;
+  background: rgb(68, 68, 68);
+}

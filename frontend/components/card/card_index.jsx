@@ -7,15 +7,12 @@ class CardIndex extends React.Component {
   }
 
   render() {
-    const cardKeys = Object.keys(this.props.cards);
     return (
-      <ul className='find-me'>
-        {
-          cardKeys.map(cardKey => (
-            <CardIndexItem key={cardKey} card={this.props.cards[cardKey]} />
-          ))
-        }
-      </ul>
+      <div className='card-index-container'>
+        <div className='card-count'>
+          { this.props.cards.length } 
+        </div>
+      </div>
     );
   }
 }

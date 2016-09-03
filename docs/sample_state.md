@@ -15,14 +15,16 @@
   },
 
   cards: {
-    {id: 1,
+    1: {id: 1,
     question: "What is a tendon?",
     answer: "Fibrous collagen that links muscle to bone",
+    mastered: false,
     deck_id: 1
     },
-    {id: 2,
+    2: {id: 2,
     question: "What is the capital of Arkansas?",
     answer: "Little Rock",
+    mastered: true,
     deck_id: 1
     }
   },

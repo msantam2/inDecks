@@ -3,7 +3,8 @@
   width: 20%;
   height: 87vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-radius: 10px;
   margin: 15px 0 15px 15px;
@@ -16,4 +17,64 @@
   padding: 23px;
   border-radius: 5px;
   background: rgb(68, 68, 68);
+}
+
+.done-back-btn {
+  background: rgb(83, 194, 234);
+  border: none;
+  padding: 15px 25px 15px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  box-shadow: -6px 8px 5px #1c1c26;
+}
+
+.mastery-bar-index {
+  color: white;
+  padding: 10%;
+  width: 100%;
+}
+
+.mastery-bar-index-item {
+  margin: 20px auto;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(68, 68, 68);
+  width: 100%;
+}
+
+.mastery-level {
+  background-color: rgb(48, 48, 48);
+  width: 10%;
+  height: 100%;
+}
+
+.mastery-progress-bar {
+  height: 100%;
+}
+
+.mastery-progress-bar-1 {
+  width: 30%;
+  background-color: #cf3bb7;
+}
+
+.mastery-progress-bar-2 {
+  background-color: #cf3b3b;
+  width: 20%;
+}
+
+.mastery-progress-bar-3 {
+  background-color: #3bcf72;
+  width: 10%;
+}
+
+.mastery-progress-bar-4 {
+  background-color: #673ab7;
+  width: 5%;
+}
+
+.mastery-progress-bar-5 {
+  background-color: #CFB53B;
+  width: 35%;
 }

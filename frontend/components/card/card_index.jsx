@@ -1,5 +1,6 @@
 import React from 'react';
 import CardIndexItem from './card_index_item';
+import MasteryBarIndex from './mastery_bar_index';
 
 class CardIndex extends React.Component {
   constructor(props) {
@@ -17,47 +18,27 @@ class CardIndex extends React.Component {
         numMastered += 1;
       }
     });
-    debugger
+
     return `${numMastered} / ${cardsLength}`;
   }
 
   componentDidMount () {
-    debugger
     this.props.requestCards();
   }
 
   render() {
     const cardKeys = Object.keys(this.props.cards);
-    debugger
+
     return (
       <div className='card-index-container'>
         <button className='done-back-btn'>&larr;   Done</button>
         <div className='card-count'>
           { this.masteredCardCount(cardKeys) } Cards Mastered
         </div>
+        <MasteryBarIndex cards={this.props.cards} />
       </div>
     );
   }
 }
 
 export default CardIndex;
-
-class BenchIndex extends React.Component {
-  componentDidMount () {
-    this.props.requestBenches();
-  }
-
-  render() {
-    const benchKeys = Object.keys(this.props.benches);
-
-    return (
-      <ul className="FIND-ME!">
-        {
-          benchKeys.map(benchKey => (
-            <BenchIndexItem key={benchKey} bench={this.props.benches[benchKey]} />
-          ))
-        }
-      </ul>
-    );
-  }
-}

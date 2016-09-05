@@ -27,7 +27,7 @@
     mastery: 5,
     deck_id: 1
     }
-  },
+  }, 
 
   decks: {
     1: {

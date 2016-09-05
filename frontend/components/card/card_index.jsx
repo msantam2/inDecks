@@ -8,7 +8,6 @@ class CardIndex extends React.Component {
     this.masteredCardCount = this.masteredCardCount.bind(this);
   }
 
-
   masteredCardCount(cardKeys) {
     let numMastered = 0;
     let cardsLength = cardKeys.length;
@@ -29,15 +28,25 @@ class CardIndex extends React.Component {
   render() {
     const cardKeys = Object.keys(this.props.cards);
 
-    return (
-      <div className='card-index-container'>
-        <button className='done-back-btn'>&larr;   Done</button>
-        <div className='card-count'>
-          { this.masteredCardCount(cardKeys) } Cards Mastered
+    if (cardKeys.length !== 0) {
+      return (
+        <div className='wrapper'>
+          <div className='card-index-container'>
+            <button className='done-back-btn'>&larr;   Done</button>
+            <div className='card-count'>
+              { this.masteredCardCount(cardKeys) } Cards Mastered
+            </div>
+            <MasteryBarIndex cards={this.props.cards} />
+          </div>
+
+          <CardIndexItem cards={this.props.cards} updateMastery={this.props.updateMastery} />
         </div>
-        <MasteryBarIndex cards={this.props.cards} />
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
   }
 }
 

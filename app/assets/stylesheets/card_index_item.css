@@ -1,0 +1,7 @@
+.flashcard-section {
+  width: 76%
+}
+
+.flashcard, .mastery-choices li, .reveal {
+  cursor: pointer;
+}

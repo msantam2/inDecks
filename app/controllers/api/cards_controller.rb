@@ -23,9 +23,19 @@ class Api::CardsController < ApplicationController
     end
   end
 
+  def update
+    @card = Card.find(params[:id])
+
+    if @card.update_attributes(card_params)
+      render 'api/cards/show', status: 200
+    else
+      render 'api/shared/error', status: 422
+    end
+  end
+
   private
 
   def card_params
-    params.require(:card).permit(:question, :answer)
+    params.require(:card).permit(:question, :answer, :mastery)
   end
 end

@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-button, input[type="submit"]  {
+button, input[type="submit"] {
   cursor: pointer;
 }
 

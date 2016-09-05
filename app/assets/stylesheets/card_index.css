@@ -1,6 +1,6 @@
 .card-index-container {
   background-color: rgb(48, 48, 48);
-  width: 20%;
+  width: 24%;
   height: 87vh;
   display: flex;
   flex-direction: column;
@@ -77,4 +77,9 @@
 .mastery-progress-bar-5 {
   background-color: #CFB53B;
   width: 35%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: row;
 }

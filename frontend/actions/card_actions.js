@@ -2,7 +2,9 @@ export const CardConstants = {
   REQUEST_CARDS: 'REQUEST_CARDS',
   RECEIVE_CARDS: 'RECEIVE_CARDS',
   UPDATE_MASTERY: 'UPDATE_MASTERY',
-  RECEIVE_UPDATED_MASTERY: 'RECEIVE_UPDATED_MASTERY'
+  RECEIVE_UPDATED_MASTERY: 'RECEIVE_UPDATED_MASTERY',
+  CREATE_CARD: 'CREATE_CARD',
+  UPDATE_CARD: 'UPDATE_CARD'
 };
 
 export const CardActions = {
@@ -23,6 +25,15 @@ export const CardActions = {
 
   receiveUpdatedMastery: (card) => ({
     type: CardConstants.RECEIVE_UPDATED_MASTERY,
+    card
+  }),
+
+  createCard: () => ({
+    type: CardConstants.CREATE_CARD
+  }),
+
+  updateCard: (card) => ({
+    type: CardConstants.UPDATE_CARD,
     card
   })
 };

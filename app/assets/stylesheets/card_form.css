@@ -1,0 +1,77 @@
+.card-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 91vh;
+  font-size: 18px;
+  background-color: rgb(242, 242, 242);
+}
+
+.back-btn {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
+  border-radius: 5px;
+  background: #03A9F4;
+  color: white;
+  align-self: flex-start;
+  margin-left: 23px;
+  margin-top: 19px;
+  box-shadow: 2px 3px 5px #888888;
+}
+
+.card-form-title {
+  margin-bottom: 60px;
+  color: #03A9F4;
+  /* border: 1px solid white; */
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 7px;
+  background: white;
+  box-shadow: 4px 5px 5px #888888;
+}
+
+.card-edit-form {
+  width: 94%;
+}
+
+.header-row {
+  font-size: 25px;
+}
+
+.card-edit-form tr {
+  padding-bottom: 20px;
+}
+
+.card-edit-form td {
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 12pt;
+  position: relative;
+}
+
+.new-card-plus-sign {
+  font-size: 21px;
+  border: 1px solid #00000000;
+  border-radius: 50%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 5px;
+  background: #03A9F4;
+  color: white;
+}
+
+.save-cards-btn {
+  padding: 16px;
+  border-radius: 4px;
+  border: none;
+  background: #03A9F4;
+  color: white;
+  margin-top: 73px;
+  box-shadow: 2px 3px 5px #888888;
+}

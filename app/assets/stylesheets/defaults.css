@@ -14,3 +14,12 @@ input[type="submit"]:hover, button:hover {
 html {
   font-family: 'Raleway', sans-serif;
 }
+
+button:focus {
+  outline:0;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}

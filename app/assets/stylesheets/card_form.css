@@ -21,6 +21,11 @@
 .card-edit-question, .card-edit-answer {
   font-size: 14px;
   width: 100%;
+  padding: 5px;
+}
+
+.card-edit-answer {
+  width: 370px;
 }
 
 .back-btn {
@@ -93,8 +98,4 @@
   margin-top: 73px;
   box-shadow: 2px 3px 5px #888888;
   margin: 5px;
-}
-
-.header-btns {
-  background-color: red; 
 }

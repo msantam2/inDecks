@@ -1,18 +1,30 @@
 import React from 'react';
+import CardFormRowItem from './card_form_row_item';
 
 class CardForm extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount () {
+    this.props.requestCards();
+  }
+
   render() {
+    let cardRows;
+
+    if (Object.keys(this.props.cards).length > 0) {
+      cardRows = Object.keys(this.props.cards).map(cardKey => (
+          <CardFormRowItem card={this.props.cards[cardKey]} />
+      ));
+    }
+
     return (
       <div className='card-form-container'>
         <button className='back-btn'>&larr;
-                Back</button>
+                  Back</button>
 
         <h2 className='card-form-title'>TBD Flashcards</h2>
-
         <table className='card-edit-form'>
           <thead>
             <tr className='header-row'>
@@ -23,24 +35,23 @@ class CardForm extends React.Component {
           </thead>
 
           <tbody>
-            <tr>
-              <td>test1</td>
-              <td>test2</td>
-              <td>test3</td>
-              <td>X (delete)</td>
-            </tr>
+            { cardRows }
           </tbody>
 
           <tfoot>
             <tr>
               <td>
-                <p className='add-a-card-link'><span className='new-card-plus-sign'>+</span> Add a Card</p>
+                <a className='add-card-plus-sign-link'>+</a>
+              </td>
+              <td className='card-edit-question'></td>
+              <td className='card-edit-answer'></td>
+              <td>
+                <button className='save-cards-btn'>Save</button>
               </td>
             </tr>
           </tfoot>
         </table>
 
-        <button className='save-cards-btn'>Save</button>
       </div>
     );
   }

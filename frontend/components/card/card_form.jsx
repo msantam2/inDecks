@@ -4,18 +4,23 @@ import CardFormRowItem from './card_form_row_item';
 class CardForm extends React.Component {
   constructor(props) {
     super(props);
+    this.deleteCard = this.deleteCard.bind(this);
   }
 
   componentDidMount () {
     this.props.requestCards();
   }
 
+  deleteCard(id) {
+    this.props.deleteCard(id);
+  }
+
   render() {
     let cardRows;
 
     if (Object.keys(this.props.cards).length > 0) {
-      cardRows = Object.keys(this.props.cards).map(cardKey => (
-          <CardFormRowItem key={`card-row-${cardKey}`} card={this.props.cards[cardKey]} />
+      cardRows = Object.keys(this.props.cards).map((cardKey, idx) => (
+          <CardFormRowItem key={`card-row-${cardKey}`} idx={idx} card={this.props.cards[cardKey]} deleteCard={this.deleteCard} />
       ));
     }
 

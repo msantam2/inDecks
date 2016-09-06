@@ -16,6 +16,15 @@ const CardAPIUtil = {
       success,
       error
     });
+  },
+
+  deleteCard: (id, success, error) => {
+    $.ajax({
+      type: 'DELETE',
+      url: `/api/cards/${id}`,
+      success,
+      error
+    });
   }
 };
 

@@ -6,8 +6,6 @@
   justify-content: space-around;
 }
 
-
-
 .flashcard, .mastery-choices li, .reveal {
   cursor: pointer;
 }
@@ -39,7 +37,9 @@
   z-index: -1000;
 }
 
-
+.mastery-choices li {
+  padding: 17px; 
+}
 
 .mastery-choices {
   display: flex;

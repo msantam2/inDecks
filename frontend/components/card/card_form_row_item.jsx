@@ -9,11 +9,11 @@ const CardFormRowItem = ({card, cardNum, deleteCard, updateQuestion, updateAnswe
       </td>
 
       <td>
-        <input onChange={updateQuestion.bind(null, card)} className='card-edit-question' value={card.question} />
+        <input onChange={updateQuestion.bind(null, card)} className='card-edit-question' defaultValue={card.question} />
       </td>
 
       <td>
-        <input onChange={updateAnswer.bind(null, card)} className='card-edit-answer' value={card.answer} />
+        <input onChange={updateAnswer.bind(null, card)} className='card-edit-answer' defaultValue={card.answer} />
       </td>
 
       <td>

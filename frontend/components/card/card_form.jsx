@@ -1,6 +1,7 @@
 import React from 'react';
 import CardFormRowItem from './card_form_row_item';
 import merge from 'lodash/merge';
+import { hashHistory } from 'react-router';
 
 class CardForm extends React.Component {
   constructor(props) {
@@ -58,9 +59,8 @@ class CardForm extends React.Component {
   updateQuestion(card, event) {
     let newCards = merge({}, this.state.cards);
 
-    let question = event.target.textContent;
+    let question = event.target.value;
     newCards[card.id].question = question;
-
     this.setState({
       cards: newCards
     });
@@ -69,7 +69,7 @@ class CardForm extends React.Component {
   updateAnswer(card, event) {
     let newCards = merge({}, this.state.cards);
 
-    let answer = event.target.textContent;
+    let answer = event.target.value;
     newCards[card.id].answer = answer;
 
     this.setState({
@@ -83,13 +83,13 @@ class CardForm extends React.Component {
     cardKeys.forEach(cardKey => {
       let currentCard = this.state.cards[cardKey];
 
-      if (currentCard.question === '' || currentCard.answer === '') {
+      if (currentCard.question === '' && currentCard.answer === '') {
+        this.props.deleteCard(currentCard.id);
+      } else if (currentCard.question === '' || currentCard.answer === '') {
         return;
       } else { // able to be saved bc card has both Q and A!
         // if card in props = card IS in db. update this existing card in db
-  
         if (Object.keys(this.props.cards).includes(currentCard.id.toString())) {
-    
           this.props.updateCard(currentCard);
         // not in props (only state) = card NOT yet in db. create new card to db
         } else {
@@ -97,6 +97,8 @@ class CardForm extends React.Component {
         }
       }
     }, this);
+
+    hashHistory.push(`/dashboard`);
   }
 
   render() {

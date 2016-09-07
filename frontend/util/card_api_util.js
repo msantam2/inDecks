@@ -41,10 +41,10 @@ const CardAPIUtil = {
     $.ajax({
       type: 'POST',
       url: '/api/cards',
-      data: card,
+      data: {card: {question: card.question, answer: card.answer}},
       success,
       error
-    }); 
+    });
   }
 };
 

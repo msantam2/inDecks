@@ -31,6 +31,7 @@ const CardMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
 
     case (CardConstants.CREATE_CARD):
+
       success = card => dispatch(CardActions.receiveCreatedCard(card));
       error = () => console.log('error with creating card');
       CardAPIUtil.createCard(action.card, success, error);

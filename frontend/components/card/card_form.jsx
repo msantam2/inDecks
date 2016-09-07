@@ -66,7 +66,7 @@ class CardForm extends React.Component {
 
     if (Object.keys(this.state.cards).length > 0) {
       cardRows = Object.keys(this.state.cards).map((cardKey, idx) => (
-          <CardFormRowItem key={`card-row-${cardKey}`} idx={idx} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} updateQuestion={this.updateQuestion} updateAnswer={this.updateAnswer} />
+          <CardFormRowItem key={`card-row-${cardKey}`} cardNum={idx + 1} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} updateQuestion={this.updateQuestion} updateAnswer={this.updateAnswer} />
       ));
     }
 

@@ -51,7 +51,7 @@
   padding-right: 100px;
   border-radius: 7px;
   background: white;
-  box-shadow: 4px 5px 5px #888888;
+  border: 2px solid rgb(83, 194, 234);
 }
 
 .card-edit-form {

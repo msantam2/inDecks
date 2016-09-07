@@ -27,26 +27,14 @@
     mastery: 5,
     deck_id: 1
     }
-  }, 
+  },
 
   decks: {
     1: {
-      title: "anatomy",
+      title: "Anatomy",
       description: "study the anatomy of the human body!",
-      subject_id: 1
+      author_id: 2
     }
   },
-
-  subjects: {
-    1: {
-      title: "Biology 101",
-      author_id: 1
-    }
-  },
-
-  search_params: {
-    subjects: [],
-    num_cards: undefined
-  }
 }
 ```

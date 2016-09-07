@@ -36,6 +36,6 @@ class Api::CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:question, :answer, :mastery)
+    params.require(:card).permit(:question, :answer, :mastery, :deck_id)
   end
 end

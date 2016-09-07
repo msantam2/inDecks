@@ -10,6 +10,15 @@
 #  updated_at      :datetime         not null
 #
 class User < ActiveRecord::Base
+  has_many :decks,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: 'Deck'
+
+  has_many :cards,
+    through: :decks,
+    source: :cards
+
   before_validation :ensure_session_token
 
   validates :password_digest, :session_token, presence: true

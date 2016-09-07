@@ -98,7 +98,7 @@ class CardForm extends React.Component {
       }
     }, this);
 
-    hashHistory.push(`/dashboard`);
+    hashHistory.push(`/dashboard`); // later push back to decks index 
   }
 
   render() {

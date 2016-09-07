@@ -9,13 +9,11 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   requestCards: () => dispatch(CardActions.requestCards()),
 
-  createCard: () => dispatch(CardActions.createCard()),
+  deleteCard: id => dispatch(CardActions.deleteCard(id)),
 
-  updateQuestion: card => dispatch(CardActions.updateQuestion(card)),
+  updateCard: card => dispatch(CardActions.updateCard(card)),
 
-  updateAnswer: card => dispatch(CardActions.updateAnswer(card)),
-  
-  deleteCard: id => dispatch(CardActions.deleteCard(id))
+  createCard: card => dispatch(CardActions.createCard(card))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardForm);

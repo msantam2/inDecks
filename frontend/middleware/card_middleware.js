@@ -24,6 +24,18 @@ const CardMiddleware = ({getState, dispatch}) => next => action => {
       CardAPIUtil.deleteCard(action.id, success, error);
       return next(action);
 
+    case (CardConstants.UPDATE_CARD):
+      success = card => dispatch(CardActions.receiveUpdatedCard(card));
+      error = () => console.log('error with updating card');
+      CardAPIUtil.updateCard(action.card, success, error);
+      return next(action);
+
+    case (CardConstants.CREATE_CARD):
+      success = card => dispatch(CardActions.receiveCreatedCard(card));
+      error = () => console.log('error with creating card');
+      CardAPIUtil.createCard(action.card, success, error);
+      return next(action);
+
     default:
       return next(action);
   }

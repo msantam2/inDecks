@@ -5,11 +5,13 @@ import merge from 'lodash/merge';
 class CardForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {cards: {}};
+
     this.deleteCard = this.deleteCard.bind(this);
     this.updateQuestion = this.updateQuestion.bind(this);
     this.updateAnswer = this.updateAnswer.bind(this);
     this.addRow = this.addRow.bind(this);
-    this.state = {cards: {}};
+    this.save = this.save.bind(this);
   }
 
   componentDidMount () {
@@ -54,11 +56,47 @@ class CardForm extends React.Component {
   }
 
   updateQuestion(card, event) {
+    let newCards = merge({}, this.state.cards);
 
+    let question = event.target.textContent;
+    newCards[card.id].question = question;
+
+    this.setState({
+      cards: newCards
+    });
   }
 
   updateAnswer(card, event) {
+    let newCards = merge({}, this.state.cards);
 
+    let answer = event.target.textContent;
+    newCards[card.id].answer = answer;
+
+    this.setState({
+      cards: newCards
+    });
+  }
+
+  save() {
+    let cardKeys = Object.keys(this.state.cards);
+
+    cardKeys.forEach(cardKey => {
+      let currentCard = this.state.cards[cardKey];
+
+      if (currentCard.question === '' || currentCard.answer === '') {
+        return;
+      } else { // able to be saved bc card has both Q and A!
+        // if card in props = card IS in db. update this existing card in db
+  
+        if (Object.keys(this.props.cards).includes(currentCard.id.toString())) {
+    
+          this.props.updateCard(currentCard);
+        // not in props (only state) = card NOT yet in db. create new card to db
+        } else {
+          this.props.createCard(currentCard);
+        }
+      }
+    }, this);
   }
 
   render() {
@@ -97,7 +135,7 @@ class CardForm extends React.Component {
               <td className='card-edit-question'></td>
               <td className='card-edit-answer'></td>
               <td>
-                <button className='save-cards-btn'>Save</button>
+                <button onClick={this.save} className='save-cards-btn'>Save</button>
               </td>
             </tr>
           </tfoot>

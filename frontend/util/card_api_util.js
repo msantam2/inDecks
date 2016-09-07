@@ -25,6 +25,26 @@ const CardAPIUtil = {
       success,
       error
     });
+  },
+
+  updateCard: (card, success, error) => {
+    $.ajax({
+      type: 'PATCH',
+      url: `/api/cards/${card.id}`,
+      data: {card: {question: card.question, answer: card.answer}},
+      success,
+      error
+    });
+  },
+
+  createCard: (card, success, error) => {
+    $.ajax({
+      type: 'POST',
+      url: '/api/cards',
+      data: card,
+      success,
+      error
+    }); 
   }
 };
 

@@ -15,7 +15,7 @@ const CardFormRowItem = ({card, cardNum, deleteCard, updateQuestion, updateAnswe
       <td>
         <input onChange={updateAnswer.bind(null, card)} className='card-edit-answer' value={card.answer} />
       </td>
-      
+
       <td>
         <a onClick={deleteCard.bind(null, card.id)} className='card-delete-btn'>&#10006;</a>
       </td>

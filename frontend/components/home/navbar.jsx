@@ -7,8 +7,16 @@ const NavBar = ({currentUser, logout}) => {
   if (currentUser) {
     greeting =
       [
-        <li key='1' className='user-email-navbar'>{currentUser.email}</li>,
-        <li key='2'><Link to='/' className='session-btn logout-btn' onClick={logout}>Logout</Link></li>
+        <li key='1'>
+          <Link to='/dashboard' className='user-email-navbar'>
+            {currentUser.email}
+          </Link>
+        </li>,
+        <li key='2'>
+          <Link to='/' className='session-btn logout-btn' onClick={logout}>
+            Logout
+          </Link>
+        </li>
       ];
   } else {
     greeting =

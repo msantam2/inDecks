@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(242, 242, 242);
+  height: 100%;
+}
+
 button, input[type="submit"] {
   cursor: pointer;
 }

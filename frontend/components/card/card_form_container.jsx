@@ -8,8 +8,13 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   requestCards: () => dispatch(CardActions.requestCards()),
+
   createCard: () => dispatch(CardActions.createCard()),
-  updateCard: card => dispatch(CardActions.updateCard(card)),
+
+  updateQuestion: card => dispatch(CardActions.updateQuestion(card)),
+
+  updateAnswer: card => dispatch(CardActions.updateAnswer(card)),
+  
   deleteCard: id => dispatch(CardActions.deleteCard(id))
 });
 

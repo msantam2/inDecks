@@ -6,6 +6,8 @@ class CardForm extends React.Component {
   constructor(props) {
     super(props);
     this.deleteCard = this.deleteCard.bind(this);
+    this.updateQuestion = this.updateQuestion.bind(this);
+    this.updateAnswer = this.updateAnswer.bind(this);
     this.addRow = this.addRow.bind(this);
     this.state = {cards: {}};
   }
@@ -51,12 +53,20 @@ class CardForm extends React.Component {
     });
   }
 
+  updateQuestion(card, event) {
+
+  }
+
+  updateAnswer(card, event) {
+
+  }
+
   render() {
     let cardRows;
 
     if (Object.keys(this.state.cards).length > 0) {
       cardRows = Object.keys(this.state.cards).map((cardKey, idx) => (
-          <CardFormRowItem key={`card-row-${cardKey}`} idx={idx} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} />
+          <CardFormRowItem key={`card-row-${cardKey}`} idx={idx} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} updateQuestion={this.updateQuestion} updateAnswer={this.updateAnswer} />
       ));
     }
 

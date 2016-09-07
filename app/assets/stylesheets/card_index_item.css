@@ -3,46 +3,86 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  height: 100%;
 }
 
-.flashcard, .mastery-choices li, .reveal {
+.flashcard, .reveal, .mastery-choices, .mastery-choices li {
   cursor: pointer;
 }
 
-.flashcard {
-
+.card-number {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .front, .back {
-  box-shadow: -6px 7px 5px #888888;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 27%;
+  box-shadow: 15px 24px 32px #888888;
+  border-radius: 7px;
+  background: #fffdeb;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  align-items: center;
+}
+
+.flashcard-side {
+  font-weight: bold;
+  font-size: 30px;
+  align-self: flex-start;
+  margin-left: 35px;
+}
+
+.flashcard-content {
+  font-size: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .reveal {
-
+  border: 2px solid rgb(83, 194, 234);
+  padding: 20px;
+  padding-left: 140px;
+  padding-right: 140px;
+  border-radius: 6px;
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  margin-top: 59px;
+  display: flex;
 }
 
-.back {
-  z-index: -1000;
+.reveal:active {
+  position:relative;
+  top:2px;
 }
 
-.flipped .back {
-  z-index: 1000;
+.card-answer-prompt {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  align-items: center;
 }
 
-.flipped .front {
-  z-index: -1000;
-}
-
-.mastery-choices li {
-  padding: 17px; 
+.how-well-know-answer {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .mastery-choices {
   display: flex;
+  font-size: 18px;
+  margin-top: -5px;
+  padding-left: 0;
+}
+
+.mastery-choices li {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  font-size: 20px;
 }
 
 .mastery-choice-1 {

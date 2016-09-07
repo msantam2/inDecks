@@ -10,6 +10,8 @@ class CardIndexItem extends React.Component {
     this.state = {side: "", currentCardIndex: 0};
     this.flipCard = this.flipCard.bind(this);
     this.updateMastery = this.updateMastery.bind(this);
+    this.sideToShow = this.sideToShow.bind(this);
+    this.isMastered = this.isMastered.bind(this);
   }
 
   flipCard() {
@@ -21,7 +23,7 @@ class CardIndexItem extends React.Component {
   updateMastery(event) {
     let mastery = parseInt(event.target.textContent);
     this.props.updateMastery(this.state.currentCardIndex, mastery);
-    
+
     let cardLength = Object.keys(this.props.cards).length;
     let nextCardIndex = (this.state.currentCardIndex % cardLength) + 1;
     this.setState({
@@ -34,6 +36,24 @@ class CardIndexItem extends React.Component {
     this.setState({
       currentCardIndex: 1
     });
+  }
+
+  sideToShow(cardContent) {
+    if (this.state.side === '') {
+      return (
+        <CardQuestion cardContent={cardContent} />
+      );
+    } else {
+      return (
+        <CardAnswer cardContent={cardContent} />
+      );
+    }
+  }
+
+  isMastered(card) {
+    if (card) {
+      return (card.mastery === 5 ? ' (Mastered)' : '');
+    }
   }
 
   render() {
@@ -54,13 +74,14 @@ class CardIndexItem extends React.Component {
         prompt = <CardAnswerPrompt updateMastery={this.updateMastery} />;
       }
     }
+
     return (
       <div className='flashcard-section'>
-        <p className='card-number'>{cardNumber}</p>
+        <p className='card-number'>{`${cardNumber} ${this.isMastered(currentCard)}`}</p>
         <article onClick={this.flipCard} className={`flashcard ${this.state.side}`}>
-          <CardQuestion cardContent={cardContent} />
-
-          <CardAnswer cardContent={cardContent} />
+          {
+            this.sideToShow(cardContent)
+          }
         </article>
         {prompt}
       </div>

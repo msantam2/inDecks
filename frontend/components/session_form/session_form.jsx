@@ -6,7 +6,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,7 +22,11 @@ class SessionForm extends React.Component {
   }
 
   update(field) {
-    return e => { this.setState({[field]: e.currentTarget.value}); };
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+    };
   }
 
   handleSubmit(e) {

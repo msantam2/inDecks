@@ -1,3 +1,4 @@
+User.create(email: 'guest@gmail.com', password: 'password')
 User.create(email: 'timyates@gmail.com', password: 'timyates')
 User.create(email: 'markthompson@gmail.com', password: 'markthompson')
 User.create(email: 'johnhamlin@gmail.com', password: 'johnhamlin')

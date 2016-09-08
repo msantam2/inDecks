@@ -1,0 +1,59 @@
+.decks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decks-list {
+  padding-left: 0;
+  width: 60%;
+}
+
+.deck-list-item {
+  border: 1px solid black;
+  background: #d0d0d0;
+  border-radius: 14px;
+  border: none;
+  text-align: center;
+}
+
+.deck-title {
+  padding-top: 10px;
+}
+
+.deck-description {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.study-btn, .edit-btn, .delete-btn {
+  background: rgb(83, 194, 234);
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.edit-btn {
+  background-color: #ffed50
+}
+
+.delete-btn {
+  background-color: #da4f4f;
+}
+
+.create-deck-btn {
+  padding: 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: #56c956;
+  margin-top: 15px;
+  align-self: flex-end;
+  margin-right: 23px;
+  box-shadow: -6px 6px 5px #888888;
+  font-size: 25px;
+}

@@ -13,12 +13,16 @@ class DeckIndex extends React.Component {
   render() {
     let deckKeys = Object.keys(this.props.decks);
     let decks = deckKeys.map(deckKey => (
-      <DeckIndexItem key={`deck-item-${deckKey}`} deck={this.props.decks[parseInt(deckKey)]} createDeck={this.props.createDeck} deleteDeck={this.props.deleteDeck} />
+      <DeckIndexItem key={`deck-item-${deckKey}`} deck={this.props.decks[parseInt(deckKey)]} deleteDeck={this.props.deleteDeck} />
     ));
 
     return (
-      <div>
-        { decks }
+      <div className='decks-container'>
+        <button className='create-deck-btn'>Create Deck</button>
+        <h1 className='decks-header'>Your Decks</h1>
+        <ul className='decks-list'>
+          { decks }
+        </ul>
       </div>
     );
   }

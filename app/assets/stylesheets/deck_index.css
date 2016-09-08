@@ -10,11 +10,11 @@
 }
 
 .deck-list-item {
-  border: 1px solid black;
+  border: 3px solid rgb(83, 194, 234);
   background: #d0d0d0;
   border-radius: 14px;
-  border: none;
   text-align: center;
+  margin-bottom: 13px;
 }
 
 .deck-title {
@@ -53,7 +53,25 @@
   background-color: #56c956;
   margin-top: 15px;
   align-self: flex-end;
-  margin-right: 23px;
+  margin-right: 70px;
   box-shadow: -6px 6px 5px #888888;
   font-size: 25px;
+}
+
+.decks-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deck-count {
+  align-self: flex-end;
+  margin-left: 70px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 51%;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background: #d0d0d0;
+  border: none;
 }

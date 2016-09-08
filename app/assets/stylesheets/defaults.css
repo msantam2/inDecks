@@ -10,6 +10,7 @@ body {
 
 button, input[type="submit"] {
   cursor: pointer;
+  border: none;
 }
 
 input[type="submit"]:hover, button:hover {

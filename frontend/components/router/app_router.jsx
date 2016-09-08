@@ -27,7 +27,7 @@ class AppRouter extends React.Component {
   _redirectIfLoggedIn(nextState, replace){
     const currentUser = this.props.currentUser;
     if (currentUser) {
-      replace('/');
+      replace('/dashboard');
     }
   }
 
@@ -40,7 +40,7 @@ class AppRouter extends React.Component {
           <Route path='/login' component={ SessionFormContainer } />
           <Route path='/dashboard' component={ CardIndexContainer } />
           <Route path='/edit-cards' component={ CardFormContainer } />
-          <Route path='/decks' component={ DeckIndexContainer } /> 
+          <Route path='/decks' component={ DeckIndexContainer } />
         </Route>
       </Router>
     );

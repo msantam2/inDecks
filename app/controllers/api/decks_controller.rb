@@ -1,9 +1,8 @@
 class Api::DecksController < ApplicationController
   def index
     # @decks = Deck.all
-
     stockDecks = Deck.where(author_id: 1)
-    currentUserDecks = Deck.where(author_id: params[:currentUserId])
+    currentUserDecks = Deck.where(author_id: current_user.id)
     @decks = stockDecks.concat(currentUserDecks)
   end
 

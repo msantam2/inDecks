@@ -29,6 +29,7 @@ Card.create!(question: 'This man bought Carnegie Steel in 1901 for $400 million 
 Deck.create!(title: 'General Chemistry', description: 'Gen Chem 101 Flashcards', author_id: 1)
 Deck.create!(title: 'Geography', description: 'Geography of the world', author_id: 1)
 Deck.create!(title: 'Computer History', author_id: 1)
-Deck.create!(title: 'Atomic Age', description: 'AP History - The events and innovations that led to the creation of the most lethal weapon of all time', author_id: 1)
+Deck.create!(title: 'Atomic Age', description: 'AP History - The events and innovations that unleashed the power of the atom upon the world', author_id: 1)
 Deck.create!(title: 'Anatomy', author_id: 1)
 Deck.create!(title: 'Gilded Age', description: 'Captains of Industry or Robber Barons?', author_id: 1)
+Deck.create!(title: 'Dance', description: 'Captains of Industry or Robber Barons?', author_id: 7)

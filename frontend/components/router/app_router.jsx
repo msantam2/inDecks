@@ -39,12 +39,14 @@ class AppRouter extends React.Component {
           <Route path='/signup' component={ SessionFormContainer } />
           <Route path='/login' component={ SessionFormContainer } />
 
-          <Route path='/dashboard' component={ DeckIndexContainer } >
-
+          <Route path='/dashboard'>
+            <IndexRoute component={ DeckIndexContainer } />
           </Route>
 
-          <Route path='/decks/:deckId' component={ DeckEditFormContainer } />
-          <Route path='/decks' component={ DeckIndexContainer } />
+          <Route path='/decks/:deckId' component={ DeckEditFormContainer }>
+            <Route path='cards' component={ CardIndexContainer } />
+          </Route>
+
         </Route>
       </Router>
     );

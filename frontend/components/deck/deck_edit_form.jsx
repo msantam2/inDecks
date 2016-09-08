@@ -1,9 +1,9 @@
 import React from 'react';
-import CardFormRowItem from './card_form_row_item';
+import DeckEditFormRowItem from './deck_edit_form_row_item';
 import merge from 'lodash/merge';
 import { hashHistory } from 'react-router';
 
-class CardForm extends React.Component {
+class DeckEditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {cards: {}};
@@ -98,7 +98,7 @@ class CardForm extends React.Component {
       }
     }, this);
 
-    hashHistory.push(`/dashboard`); // later push back to decks index 
+    hashHistory.push(`/dashboard`); // later push back to decks index
   }
 
   render() {
@@ -106,7 +106,7 @@ class CardForm extends React.Component {
 
     if (Object.keys(this.state.cards).length > 0) {
       cardRows = Object.keys(this.state.cards).map((cardKey, idx) => (
-          <CardFormRowItem key={`card-row-${cardKey}`} cardNum={idx + 1} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} updateQuestion={this.updateQuestion} updateAnswer={this.updateAnswer} />
+          <DeckEditFormRowItem key={`card-row-${cardKey}`} cardNum={idx + 1} card={this.state.cards[cardKey]} deleteCard={this.deleteCard} updateQuestion={this.updateQuestion} updateAnswer={this.updateAnswer} />
       ));
     }
 
@@ -148,4 +148,4 @@ class CardForm extends React.Component {
   }
 }
 
-export default CardForm;
+export default DeckEditForm;

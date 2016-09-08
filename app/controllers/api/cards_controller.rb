@@ -1,6 +1,7 @@
 class Api::CardsController < ApplicationController
   def index
-    @cards = Card.all
+    # @cards = Card.all
+    Card.where(deck_id: params[:currentDeckId])
   end
 
   def show

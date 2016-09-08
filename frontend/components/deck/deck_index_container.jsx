@@ -2,9 +2,12 @@ import DeckIndex from './deck_index';
 import { DeckConstants, DeckActions } from '../../actions/deck_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => ({
-  decks: state.decks
-});
+const mapStateToProps = (state, ownProps) => {
+  return ({
+    decks: state.decks,
+    authorId: ownProps.params.authorId
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   requestDecks: () => dispatch(DeckActions.requestDecks()),

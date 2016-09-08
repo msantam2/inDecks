@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardFormRowItem = ({card, cardNum, deleteCard, updateQuestion, updateAnswer}) => {
+const DeckEditFormRowItem = ({card, cardNum, deleteCard, updateQuestion, updateAnswer}) => {
 
   return (
     <tr key={card.id}>
@@ -23,4 +23,4 @@ const CardFormRowItem = ({card, cardNum, deleteCard, updateQuestion, updateAnswe
   );
 };
 
-export default CardFormRowItem;
+export default DeckEditFormRowItem;

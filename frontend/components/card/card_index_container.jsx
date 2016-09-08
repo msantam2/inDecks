@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   requestCards: () => dispatch(CardActions.requestCards()),
-  
+
   updateMastery: (id, mastery) => dispatch(CardActions.updateMastery(id, mastery))
 });
 

@@ -8,6 +8,7 @@ import SessionFormContainer from '../session_form/session_form_container';
 import Dashboard from '../home/dashboard';
 import CardIndexContainer from '../card/card_index_container';
 import CardFormContainer from '../card/card_form_container';
+import DeckIndexContainer from '../deck/deck_index_container';
 
 class AppRouter extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ class AppRouter extends React.Component {
           <Route path='/login' component={ SessionFormContainer } />
           <Route path='/dashboard' component={ CardIndexContainer } />
           <Route path='/edit-cards' component={ CardFormContainer } />
+          <Route path='/decks' component={ DeckIndexContainer } /> 
         </Route>
       </Router>
     );

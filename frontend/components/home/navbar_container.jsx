@@ -1,5 +1,5 @@
 import NavBar from './navbar';
-import { SessionActions } from '../../actions/session_actions';
+import { SessionActions, SessionConstants } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({

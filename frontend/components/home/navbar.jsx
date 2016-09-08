@@ -7,12 +7,11 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
     this.guestLogin = this.guestLogin.bind(this);
   }
 
-  guestLogin() {
-    let user = {user: {email: 'KenJennings@gmail.com',
-                       password: 'password'}};
-
-    this.props.login(user);
-    hashHistory.push('/dashboard');
+  guestLogin(event) {
+    event.preventDefault();
+    let user = {email: 'KenJennings@gmail.com', password: 'password'};
+    
+    this.props.login({user});
   }
 
   render() {

@@ -17,15 +17,6 @@
   margin-bottom: 13px;
 }
 
-.deck-title {
-  padding-top: 10px;
-}
-
-.deck-description {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 .study-btn, .edit-btn, .delete-btn {
   background: rgb(83, 194, 234);
   border: none;

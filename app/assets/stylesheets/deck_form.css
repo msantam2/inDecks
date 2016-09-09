@@ -31,3 +31,7 @@
   font-weight: bold;
   background: rgb(169, 232, 255);
 }
+
+.deck-title-prompt, .deck-description-prompt {
+  font-size: 20px; 
+}

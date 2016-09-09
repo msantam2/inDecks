@@ -15,6 +15,16 @@ const DeckAPIUtil = {
       success,
       error
     });
+  },
+
+  createDeck: (deck, success, error) => {
+    $.ajax({
+      type: 'POST',
+      url: '/api/decks',
+      data: {deck},
+      success,
+      error
+    }); 
   }
 };
 

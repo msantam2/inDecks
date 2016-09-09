@@ -11,11 +11,17 @@ const DeckMiddleware = ({getState, dispatch}) => next => action => {
       error = () => console.log('error with fetching decks');
       DeckAPIUtil.fetchDecks(success, error);
       return next(action);
-      
+
     case (DeckConstants.DELETE_DECK):
       success = deck => dispatch(DeckActions.receiveDeletedDeck(deck));
       error = () => console.log('error with deleting deck');
       DeckAPIUtil.deleteDeck(action.deckId, success, error);
+      return next(action);
+
+    case (DeckConstants.CREATE_DECK):
+      success = deck => dispatch(DeckActions.receiveCreatedDeck(deck));
+      error = () => console.log('error with creating deck');
+      DeckAPIUtil.createDeck(action.deck, success, error);
       return next(action);
 
     default:

@@ -12,7 +12,11 @@ const DecksReducer = (state = {}, action) => {
       nextState = merge({}, state);
       delete nextState[action.deck.id];
       return nextState;
-      
+
+    case (DeckConstants.RECEIVE_CREATED_DECK):
+      nextState = merge({}, state, action.deck);
+      return nextState;
+
     default:
       return state;
   }

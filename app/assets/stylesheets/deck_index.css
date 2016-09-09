@@ -38,12 +38,17 @@
   margin-bottom: 10px;
 }
 
+.study-btn {
+  margin-left: 15px;
+}
+
 .edit-btn {
   background-color: #ffed50
 }
 
 .delete-btn {
   background-color: #da4f4f;
+  margin-right: 15px;
 }
 
 .create-deck-btn {

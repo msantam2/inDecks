@@ -42,7 +42,7 @@ const CardAPIUtil = {
     $.ajax({
       type: 'POST',
       url: '/api/cards',
-      data: {card: {question: card.question, answer: card.answer}},
+      data: {card},
       success,
       error
     });

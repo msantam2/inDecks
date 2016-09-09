@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state, ownProps) => {
   return ({
     cards: state.cards,
+    decks: state.decks,
     deckId: ownProps.params.deckId
   });
 };

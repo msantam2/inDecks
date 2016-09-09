@@ -88,6 +88,7 @@ class DeckEditForm extends React.Component {
     cardKeys.forEach(cardKey => {
       let currentCard = this.state.cards[cardKey];
 
+
       if (currentCard.question === '' && currentCard.answer === '') {
         this.props.deleteCard(currentCard.id);
       } else if (currentCard.question === '' || currentCard.answer === '') {
@@ -98,7 +99,11 @@ class DeckEditForm extends React.Component {
           this.props.updateCard(currentCard);
         // not in props (only state) = card NOT yet in db. create new card to db
         } else {
-          this.props.createCard(currentCard);
+          // need to bind the deckId to the currentCard in order to
+          // persist it to the database!
+          let createdCard = Object.assign({}, currentCard);
+          createdCard['deck_id'] = parseInt(this.props.deckId);
+          this.props.createCard(createdCard);
         }
       }
     }, this);
@@ -115,12 +120,19 @@ class DeckEditForm extends React.Component {
       ));
     }
 
+    // setting the title to the deck title. Object.keys guards against
+    // initial render when this.props.decks is not yet populated
+    let cardFormTitle;
+    if (Object.keys(this.props.decks).length > 0) {
+      cardFormTitle = `${this.props.decks[parseInt(this.props.deckId)].title} Flashcards`;
+    }
+
     return (
       <div className='card-form-container'>
         <button className='back-btn' onClick={this.backToDashBoard}>&larr;
                   Back</button>
 
-        <h2 className='card-form-title'>TBD Flashcards</h2>
+                <h2 className='card-form-title'>{ cardFormTitle }</h2>
         <table className='card-edit-form'>
           <thead>
             <tr className='header-row'>

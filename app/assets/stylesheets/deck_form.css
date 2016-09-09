@@ -14,5 +14,20 @@
 }
 
 .deck-form-close-btn {
-  background: none; 
+  background: none;
+}
+
+.create-deck-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-create-deck {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 27px;
+  border-radius: 11px;
+  font-weight: bold;
+  background: rgb(169, 232, 255);
 }

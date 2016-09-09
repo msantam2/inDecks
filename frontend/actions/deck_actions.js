@@ -27,9 +27,9 @@ export const DeckActions = {
     deck
   }),
 
-  deleteDeck: deck => ({
+  deleteDeck: deckId => ({
     type: DeckConstants.DELETE_DECK,
-    deck
+    deckId
   }),
 
   receiveDeletedDeck: deck => ({

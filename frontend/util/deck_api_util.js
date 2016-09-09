@@ -7,6 +7,15 @@ const DeckAPIUtil = {
       error
     });
   },
+
+  deleteDeck: (deckId, success, error) => {
+    $.ajax({
+      type: 'DELETE',
+      url: `/api/decks/${deckId}`,
+      success,
+      error
+    });
+  }
 };
 
 export default DeckAPIUtil;

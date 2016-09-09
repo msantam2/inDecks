@@ -12,8 +12,9 @@ export const CardConstants = {
 };
 
 export const CardActions = {
-  requestCards: () => ({
-    type: CardConstants.REQUEST_CARDS
+  requestCards: deckId => ({
+    type: CardConstants.REQUEST_CARDS,
+    deckId
   }),
 
   receiveCards: cards => ({

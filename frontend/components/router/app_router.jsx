@@ -43,10 +43,9 @@ class AppRouter extends React.Component {
             <IndexRoute component={ DeckIndexContainer } />
           </Route>
 
-          <Route path='/decks/:deckId' component={ DeckEditFormContainer }>
-            <Route path='cards' component={ CardIndexContainer } />
-          </Route>
+          <Route path='/decks/:deckId' component={ DeckEditFormContainer } />
 
+          <Route path='/decks/:deckId/cards' component={ CardIndexContainer } />
         </Route>
       </Router>
     );

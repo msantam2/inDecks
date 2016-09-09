@@ -1,8 +1,9 @@
 const CardAPIUtil = {
-  fetchCards: (success, error) => {
+  fetchCards: (deckId, success, error) => {
     $.ajax({
       type: 'GET',
       url: '/api/cards',
+      data: {deckId},
       success,
       error
     });

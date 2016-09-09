@@ -9,7 +9,7 @@ const CardMiddleware = ({getState, dispatch}) => next => action => {
     case (CardConstants.REQUEST_CARDS):
       success = cards => dispatch(CardActions.receiveCards(cards));
       error = () => console.log('error with fetching cards');
-      CardAPIUtil.fetchCards(success, error);
+      CardAPIUtil.fetchCards(action.deckId, success, error);
       return next(action);
 
     case (CardConstants.UPDATE_MASTERY):

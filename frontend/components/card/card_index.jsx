@@ -17,12 +17,12 @@ class CardIndex extends React.Component {
         numMastered += 1;
       }
     });
-
+    
     return `${numMastered} / ${cardsLength}`;
   }
 
   componentDidMount () {
-    this.props.requestCards();
+    this.props.requestCards(this.props.deckId);
   }
 
   render() {

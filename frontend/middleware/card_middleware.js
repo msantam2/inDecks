@@ -15,7 +15,7 @@ const CardMiddleware = ({getState, dispatch}) => next => action => {
     case (CardConstants.UPDATE_MASTERY):
       success = card => dispatch(CardActions.receiveUpdatedMastery(card));
       error = () => console.log('error with updating mastery level');
-      CardAPIUtil.updateMastery(action.id, action.mastery, success, error);
+      CardAPIUtil.updateMastery(action.card, success, error);
       return next(action);
 
     case (CardConstants.DELETE_CARD):

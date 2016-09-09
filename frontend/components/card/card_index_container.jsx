@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   requestCards: deckId => dispatch(CardActions.requestCards(deckId)),
 
-  updateMastery: (id, mastery) => dispatch(CardActions.updateMastery(id, mastery))
+  updateMastery: card => dispatch(CardActions.updateMastery(card))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardIndex);

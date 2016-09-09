@@ -9,11 +9,11 @@ const CardAPIUtil = {
     });
   },
 
-  updateMastery: (id, mastery, success, error) => {
+  updateMastery: (card, success, error) => {
     $.ajax({
       type: 'PATCH',
-      url: `/api/cards/${id}`,
-      data: {card: {id: id, mastery: mastery}},
+      url: `/api/cards/${card.id}`,
+      data: {card},
       success,
       error
     });
@@ -32,7 +32,7 @@ const CardAPIUtil = {
     $.ajax({
       type: 'PATCH',
       url: `/api/cards/${card.id}`,
-      data: {card: {question: card.question, answer: card.answer}},
+      data: {card},
       success,
       error
     });

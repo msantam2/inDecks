@@ -22,10 +22,9 @@ export const CardActions = {
     cards
   }),
 
-  updateMastery: (id, mastery) => ({
+  updateMastery: (card) => ({
     type: CardConstants.UPDATE_MASTERY,
-    id: id,
-    mastery: mastery,
+    card
   }),
 
   receiveUpdatedMastery: card => ({

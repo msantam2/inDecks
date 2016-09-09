@@ -21,14 +21,14 @@ class CardIndexItem extends React.Component {
     });
   }
 
-  updateMastery(event) {
+  updateMastery(currentCard, event) {
     let mastery = parseInt(event.target.textContent);
-    this.props.updateMastery(this.state.currentCardIndex, mastery);
+    currentCard['mastery'] = mastery;
+    currentCard['deck_id'] = this.props.deckId;
+    this.props.updateMastery(currentCard);
 
     let cardLength = Object.keys(this.props.cards).length;
-    debugger
     let nextCardIndex = (this.state.currentCardIndex % cardLength) + 1;
-    debugger
     this.setState({
       currentCardIndex: nextCardIndex,
       side: this.state.side === '' ? 'flipped' : ''
@@ -71,9 +71,8 @@ class CardIndexItem extends React.Component {
     let cardContent;
     let prompt;
     let cardLength = Object.keys(this.props.cards).length;
-
     if (this.state.currentCardIndex >= 1) {
-      debugger
+
       cardNumber = `${this.state.currentCardIndex} of ${cardLength}`;
       // if this.props.cards = {11: {card1}, 13: {card2}} and
       // currentCardIndex = 2, we need to convert 2 to Id 13
@@ -83,7 +82,7 @@ class CardIndexItem extends React.Component {
         prompt = <CardQuestionPrompt flipCard={this.flipCard} />;
       } else if (this.state.side === 'flipped') {
         cardContent = currentCard.answer;
-        prompt = <CardAnswerPrompt updateMastery={this.updateMastery} />;
+        prompt = <CardAnswerPrompt updateMastery={this.updateMastery.bind(null, currentCard)} />;
       }
     }
 

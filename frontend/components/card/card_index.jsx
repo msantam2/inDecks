@@ -34,7 +34,7 @@ class CardIndex extends React.Component {
   render() {
     const cardKeys = Object.keys(this.props.cards);
 
-    if (cardKeys.length !== 0) {
+    if (cardKeys.length >= 0) {
       return (
         <div className='wrapper'>
           <div className='card-index-container'>
@@ -45,7 +45,7 @@ class CardIndex extends React.Component {
             <MasteryBarIndex cards={this.props.cards} />
           </div>
 
-          <CardIndexItem cards={this.props.cards} updateMastery={this.props.updateMastery} />
+          <CardIndexItem cards={this.props.cards} updateMastery={this.props.updateMastery} deckId={this.props.deckId} />
         </div>
       );
     } else {

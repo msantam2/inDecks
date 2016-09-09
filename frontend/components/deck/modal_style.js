@@ -16,7 +16,11 @@ const ModalStyle = {
     border          : '1px solid #ccc',
     padding         : '20px',
     opacity         : '0',
-    transition      : 'opacity 0.5s'
+    transition      : 'opacity 0.5s',
+    background      : 'rgb(83, 194, 234)',
+    borderRadius    : '38px',
+    width           : '50%',
+    margin          : '0 auto'
   }
 };
 

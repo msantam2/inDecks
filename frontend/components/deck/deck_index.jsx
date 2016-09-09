@@ -28,6 +28,7 @@ class DeckIndex extends React.Component {
     this.setState({
       modalOpen: false
     });
+    ModalStyle.content.opacity = 0;
   }
 
   onModalOpen() {
@@ -36,6 +37,7 @@ class DeckIndex extends React.Component {
 
   render() {
     let deckKeys = Object.keys(this.props.decks);
+
     let decks = deckKeys.map(deckKey => (
       <DeckIndexItem key={`deck-item-${deckKey}`} deck={this.props.decks[parseInt(deckKey)]} deleteDeck={this.props.deleteDeck} />
     ));
@@ -60,8 +62,8 @@ class DeckIndex extends React.Component {
           style={ModalStyle}
           onAfterOpen={this.onModalOpen}>
 
-          <button onClick={this.onModalClose}>&#10006;</button>
-          <DeckForm currentUser={this.props.currentUser} createDeck={this.props.createDeck}/> 
+          <button onClick={this.onModalClose} className='deck-form-close-btn'>&#10006;</button>
+          <DeckForm onModalClose={this.onModalClose} currentUser={this.props.currentUser} createDeck={this.props.createDeck}/>
         </Modal>
       </div>
     );

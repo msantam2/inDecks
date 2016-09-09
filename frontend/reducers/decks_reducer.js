@@ -14,7 +14,8 @@ const DecksReducer = (state = {}, action) => {
       return nextState;
 
     case (DeckConstants.RECEIVE_CREATED_DECK):
-      nextState = merge({}, state, action.deck);
+      nextState = merge({}, state);
+      nextState[action.deck.id] = action.deck;
       return nextState;
 
     default:

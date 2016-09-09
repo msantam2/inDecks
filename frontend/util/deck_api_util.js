@@ -24,7 +24,7 @@ const DeckAPIUtil = {
       data: {deck},
       success,
       error
-    }); 
+    });
   }
 };
 

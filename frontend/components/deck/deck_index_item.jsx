@@ -18,7 +18,7 @@ class DeckIndexItem extends React.Component {
   }
 
   deleteDeck(deckId) {
-    this.props.deleteDeck(deckId); 
+    this.props.deleteDeck(deckId);
   }
 
   render() {

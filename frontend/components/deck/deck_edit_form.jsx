@@ -13,10 +13,11 @@ class DeckEditForm extends React.Component {
     this.updateAnswer = this.updateAnswer.bind(this);
     this.addRow = this.addRow.bind(this);
     this.save = this.save.bind(this);
+    this.backToDashBoard = this.backToDashBoard.bind(this);
   }
 
   componentDidMount () {
-    this.props.requestCards();
+    this.props.requestCards(this.props.deckId);
   }
 
   componentWillReceiveProps (newProps) {
@@ -39,6 +40,10 @@ class DeckEditForm extends React.Component {
         cards: newCards
       });
     }
+  }
+
+  backToDashBoard() {
+    hashHistory.push('/dashboard');
   }
 
   addRow() {
@@ -112,7 +117,7 @@ class DeckEditForm extends React.Component {
 
     return (
       <div className='card-form-container'>
-        <button className='back-btn'>&larr;
+        <button className='back-btn' onClick={this.backToDashBoard}>&larr;
                   Back</button>
 
         <h2 className='card-form-title'>TBD Flashcards</h2>

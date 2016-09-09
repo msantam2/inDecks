@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestCards: () => dispatch(CardActions.requestCards()),
+  requestCards: deckId => dispatch(CardActions.requestCards(deckId)),
 
   deleteCard: id => dispatch(CardActions.deleteCard(id)),
 

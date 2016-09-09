@@ -1,11 +1,13 @@
 import React from 'react';
 import CardIndexItem from './card_index_item';
 import MasteryBarIndex from './mastery_bar_index';
+import { hashHistory } from 'react-router';
 
 class CardIndex extends React.Component {
   constructor(props) {
     super(props);
     this.masteredCardCount = this.masteredCardCount.bind(this);
+    this.doneStudying = this.doneStudying.bind(this);
   }
 
   masteredCardCount(cardKeys) {
@@ -17,8 +19,12 @@ class CardIndex extends React.Component {
         numMastered += 1;
       }
     });
-    
+
     return `${numMastered} / ${cardsLength}`;
+  }
+
+  doneStudying() {
+    hashHistory.push('/dashboard');
   }
 
   componentDidMount () {
@@ -32,7 +38,7 @@ class CardIndex extends React.Component {
       return (
         <div className='wrapper'>
           <div className='card-index-container'>
-            <button className='done-back-btn'>&larr;   Done</button>
+            <button className='done-back-btn' onClick={this.doneStudying}>&larr;   Done</button>
             <div className='card-count'>
               { this.masteredCardCount(cardKeys) } Cards Mastered
             </div>

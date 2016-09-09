@@ -3,7 +3,8 @@ import { DeckConstants, DeckActions } from '../../actions/deck_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  decks: state.decks
+  decks: state.decks,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,13 +1,37 @@
 import React from 'react';
 import DeckIndexItem from './deck_index_item';
+import { hashHistory, Link } from 'react-router';
+import Modal from 'react-modal';
+import ModalStyle from './modal_style';
+import DeckForm from './deck_form';
 
 class DeckIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {modalOpen: false};
+    this._handleClick = this._handleClick.bind(this);
+    this.onModalClose = this.onModalClose.bind(this);
+    this.onModalOpen = this.onModalOpen.bind(this);
   }
 
   componentDidMount() {
     this.props.requestDecks();
+  }
+
+  _handleClick() {
+    this.setState({
+      modalOpen: true
+    });
+  }
+
+  onModalClose() {
+    this.setState({
+      modalOpen: false
+    });
+  }
+
+  onModalOpen() {
+    ModalStyle.content.opacity = 100;
   }
 
   render() {
@@ -21,7 +45,7 @@ class DeckIndex extends React.Component {
       <div>
         <nav className='decks-nav'>
           <div className='deck-count'>{ deckCount } Decks</div>
-          <button className='create-deck-btn'>Create Deck</button>
+          <button className='create-deck-btn'         onClick={this._handleClick}>Create Deck</button>
         </nav>
         <div className='decks-container'>
           <h1 className='decks-header'>Your Decks</h1>
@@ -29,6 +53,16 @@ class DeckIndex extends React.Component {
             { decks }
           </ul>
         </div>
+
+        <Modal
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.onModalClose}
+          style={ModalStyle}
+          onAfterOpen={this.onModalOpen}>
+
+          <button onClick={this.onModalClose}>&#10006;</button>
+          <DeckForm currentUser={this.props.currentUser} createDeck={this.props.createDeck}/> 
+        </Modal>
       </div>
     );
   }

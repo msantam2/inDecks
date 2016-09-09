@@ -1,0 +1,14 @@
+.create-deck-btn {
+  text-decoration: none;
+  color: black;
+  position: relative;;
+}
+
+.create-deck-btn:hover {
+  -webkit-filter: brightness(85%);
+}
+
+.create-deck-btn:active {
+  position: relative;
+  top: 1px;
+}

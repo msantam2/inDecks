@@ -9,6 +9,7 @@ import Dashboard from '../home/dashboard';
 import DeckIndexContainer from '../deck/deck_index_container';
 import DeckEditFormContainer from '../deck/deck_edit_form_container';
 import CardIndexContainer from '../card/card_index_container';
+import DeckFormContainer from '../deck/deck_form_container';
 
 class AppRouter extends React.Component {
   constructor(props){
@@ -39,12 +40,10 @@ class AppRouter extends React.Component {
           <Route path='/signup' component={ SessionFormContainer } />
           <Route path='/login' component={ SessionFormContainer } />
 
-          <Route path='/dashboard'>
-            <IndexRoute component={ DeckIndexContainer } />
-          </Route>
+          <Route path='/dashboard' component={ DeckIndexContainer } />
 
           <Route path='/decks/:deckId' component={ DeckEditFormContainer } />
-          
+
           <Route path='/decks/:deckId/cards' component={ CardIndexContainer } />
         </Route>
       </Router>

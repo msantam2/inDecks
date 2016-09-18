@@ -8,6 +8,10 @@ body {
   height: 100%;
 }
 
+button {
+  outline: none;
+}
+
 button, input[type="submit"] {
   cursor: pointer;
   border: none;

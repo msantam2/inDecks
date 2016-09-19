@@ -13,7 +13,7 @@ inDecks is a simple and intuitive single-page application. All content is delive
 
 ### Guest Login
 
-<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/guest_login.gif" width="400" height="400" />
+<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/guest_login.gif" width="800" height="400" />
 
 The user can choose to login as a Guest on the application. The 'smart' React component, `NavBarContainer`, passes down the `login` function to the `NavBar` component via `mapDispatchToProps`, allowing it to trigger a Redux cycle which communicates with the back-end to log the user in as the pre-defined guest.
 
@@ -38,7 +38,7 @@ __________
 
 ### Studying Flashcards
 
-<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/study_flashcard.gif" width="400" height="400" />
+<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/study_flashcard.gif" width="800" height="400" />
 
 The user can study the cards specific to each deck they have created. To simulate the feeling of flipping over a flashcard that everyone is familiar with, a React component, `CardIndexItem`, is rendered that is populated with either the question or the answer according to which side of the flashcard the user is currently on. Further sub-components, `CardQuestionPrompt` & `CardAnswerPrompt`, are also rendered based off of this condition.
 
@@ -56,7 +56,7 @@ __________
 
 ### Deck CRUD
 
-<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/deck_crud.gif" width="400" height="400" />
+<img src="https://github.com/msantam2/inDecks/blob/master/app/assets/images/deck_crud.gif" width="800" height="400" />
 
 The user can edit decks by creating and deleting cards (in addition to creating and deleting decks themselves). The creation of a card persists it to the database with a `deck_id` foreign key set to the `id` of the current deck being edited.
 

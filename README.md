@@ -3,7 +3,7 @@
 [inDecks Live][inDecks]
 [inDecks]: http://www.studyindecks.com/
 
-inDecks is a single-page, full-stack web application inspired by BrainScape, a fun and efficient way to study digital flashcards.  It is built with a Ruby on Rails back-end, a PostgreSQL database, and React.js (in tandem with a Redux architecture) on the front-end.
+inDecks is a single-page, full-stack web application inspired by Brainscape, a fun and efficient way to study digital flashcards.  It is built with a Ruby on Rails back-end, a PostgreSQL database, and React.js (in tandem with a Redux architecture) on the front-end.
 
 ### Single-Page App
 

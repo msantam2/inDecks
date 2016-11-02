@@ -10,12 +10,13 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
   guestLogin(event) {
     event.preventDefault();
     let user = {email: 'KenJennings@gmail.com', password: 'password'};
-    
+
     this.props.login({user});
   }
 
   render() {
     let greeting;
+    let logo;
 
     if (this.props.currentUser) {
       greeting =
@@ -31,6 +32,8 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
             </Link>
           </li>
         ];
+
+        logo = <Link to='/dashboard'><img className='logo-link' src='https://s14.postimg.org/a8s0augn5/92531cf5_3646_48c3_ad23_52241a979519.png' alt='logo'/></Link>;
     } else {
       greeting =
         [
@@ -38,11 +41,13 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
           <li key='1'><Link to='/login' className='session-btn' activeClassName='current'>Login</Link></li>,
           <li key='2'><Link to='/signup' className='session-btn' activeClassName='current'>Sign Up</Link></li>
         ];
+
+      logo = <img className='logo-link' src='https://s14.postimg.org/a8s0augn5/92531cf5_3646_48c3_ad23_52241a979519.png' alt='logo'/>;
     }
 
     return (
       <nav className='navbar'>
-        <Link to='/dashboard'><img className='logo-link' src='https://s14.postimg.org/a8s0augn5/92531cf5_3646_48c3_ad23_52241a979519.png' alt='logo'/></Link>
+        {logo}
 
         <ul className='greeting'>
           {greeting}

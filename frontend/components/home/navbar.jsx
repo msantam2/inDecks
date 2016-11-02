@@ -48,7 +48,6 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
     return (
       <nav className='navbar'>
         {logo}
-
         <ul className='greeting'>
           {greeting}
         </ul>

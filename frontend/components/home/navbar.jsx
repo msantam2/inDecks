@@ -33,7 +33,7 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
           </li>
         ];
 
-        logo = <Link to='/dashboard'><img className='logo-link' src='https://s14.postimg.org/a8s0augn5/92531cf5_3646_48c3_ad23_52241a979519.png' alt='logo'/></Link>;
+        logo = <Link to='/dashboard'><img className='logo-link' src='http://res.cloudinary.com/dc2o3efbz/image/upload/v1478127732/indecks-logo_m9qa9z.png' alt='logo'/></Link>;
     } else {
       greeting =
         [
@@ -42,7 +42,7 @@ class NavBar extends React.Component { // ({currentUser, logout}) => {
           <li key='2'><Link to='/signup' className='session-btn' activeClassName='current'>Sign Up</Link></li>
         ];
 
-      logo = <img className='logo-link' src='https://s14.postimg.org/a8s0augn5/92531cf5_3646_48c3_ad23_52241a979519.png' alt='logo'/>;
+      logo = <img className='logo-link' src='http://res.cloudinary.com/dc2o3efbz/image/upload/v1478127732/indecks-logo_m9qa9z.png' alt='logo'/>;
     }
 
     return (

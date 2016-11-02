@@ -6,15 +6,8 @@
   border-bottom: 1px solid white;
 }
 
-.logo-link {
-  margin: -80px;
-  margin-left: 0;
-}
-
 .greeting {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 .session-btn {
 	-moz-box-shadow:inset 0px 39px 0px -24px rgb(109, 209, 245);
@@ -56,5 +49,5 @@
   margin-right: 20px;
   font-size:15px;
   color: white;
-  text-decoration: none; 
+  text-decoration: none;
 }

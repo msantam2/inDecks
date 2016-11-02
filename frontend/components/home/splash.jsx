@@ -2,7 +2,7 @@ import React from 'react';
 
 const Splash = () => (
   <div className='splash'>
-    <img src='https://s16.postimg.org/rc6v4irqt/index_cards.png' alt='index-cards' className='index-cards-img'/>
+    <img src='http://res.cloudinary.com/dc2o3efbz/image/upload/v1478126265/index-cards_f2tx1m.png' alt='index-cards' className='index-cards-img'/>
   </div>
 );
 

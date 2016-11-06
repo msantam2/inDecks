@@ -16,4 +16,8 @@ class Card < ActiveRecord::Base
   validates_inclusion_of :mastery, :in => 0..5
 
   belongs_to :deck
+
+  # delegate essentially creates a belongs_to :through association.
+  # here, each card belongs to an author using delegate syntax
+  delegate :author, to: :deck
 end

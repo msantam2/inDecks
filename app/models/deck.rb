@@ -18,7 +18,7 @@ class Deck < ActiveRecord::Base
     foreign_key: :author_id,
     class_name: 'User'
 
-  has_many :cards, dependent: :destroy, 
+  has_many :cards, dependent: :destroy,  
     primary_key: :id,
     foreign_key: :deck_id,
     class_name: 'Card'

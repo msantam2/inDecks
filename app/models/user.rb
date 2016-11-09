@@ -10,7 +10,7 @@
 #  updated_at      :datetime         not null
 #
 class User < ActiveRecord::Base
-  has_many :decks, dependent: :destroy,
+  has_many :decks, dependent: :destroy, 
     primary_key: :id,
     foreign_key: :author_id,
     class_name: 'Deck'
